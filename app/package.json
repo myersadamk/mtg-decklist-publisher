@@ -16,7 +16,12 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.3",
+    "cheerio-tableparser": "^1.0.1",
     "express": "^4.16.4",
-    "redis": "^2.8.0"
+    "jsdom": "^14.0.0",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   }
 }

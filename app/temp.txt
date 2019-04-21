@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# deckstats: http://ogp.me/ns/fb/deckstats#">
+<script src="//deckstats.net/lng.js.1551732647.php?lng=en" charset="utf-8"></script>
+<script src="//deckstats.net/js/merged/merged.jquery.1555712014.js" charset="utf-8"></script>
+<script src="//deckstats.net/js/merged/merged.jquery.plugins.1555712014.js" charset="utf-8"></script>
+<script src="//deckstats.net/js/merged/merged.deck.1555712014.js" charset="utf-8"></script>
+<title>Dimir Commander (EDH / Commander) &mdash; deckstats.net | Magic: The Gathering Decks</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" sizes="16x16" href="https://deckstats.net/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://deckstats.net/img/logo/deckstats32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://deckstats.net/img/logo/deckstats48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://deckstats.net/img/logo/deckstats192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://deckstats.net/img/logo/deckstats512.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://deckstats.net/img/logo/deckstats180.png">
+<meta name="description" content="Dimir &middot; Commander - Grimgrin, Corpse-Born, Army of the Damned, Cemetery Reaper, Death Baron, Diregraf Captain, Diregraf Colossus, ..." />
+<meta name="theme-color" content="#336799" />
+<meta property="fb:admins" content="794549653" />
+<meta property="fb:app_id" content="318919094866464" />
+<meta property="og:site_name" content="deckstats" />
+<meta property="og:type" content="deckstats:deck" />
+<meta property="og:title" content="Dimir Commander (EDH / Commander)" />
+<meta property="og:description" content="Dimir &middot; Commander - Grimgrin, Corpse-Born, Army of the Damned, Cemetery Reaper, Death Baron, Diregraf Captain, Diregraf Colossus, ..." />
+<meta property="og:url" content="https://deckstats.net/decks/130606/1269669-dimir-commander" /><meta property="og:image" content="https://deckstats.net/cache/color_img/200/6_square.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@deckstats" />
+<meta name="twitter:title" content="Dimir Commander (EDH / Commander)" />
+<meta name="twitter:description" content="Dimir &middot; Commander - Grimgrin, Corpse-Born, Army of the Damned, Cemetery Reaper, Death Baron, Diregraf Captain, Diregraf Colossus, ..." />
+<meta name="twitter:image" content="https://deckstats.net/cache/color_img/200/6_square.png" />
+<link rel="alternate" href="https://deckstats.net/decks/130606/1269669-dimir-commander/en" hreflang="en" />
+<link rel="alternate" href="https://deckstats.net/decks/130606/1269669-dimir-commander/de" hreflang="de" />
+<link rel="alternate" href="https://deckstats.net/decks/130606/1269669-dimir-commander/es" hreflang="es" />
+<link rel="alternate" href="https://deckstats.net/decks/130606/1269669-dimir-commander/pt" hreflang="pt" />
+<link rel="alternate" href="https://deckstats.net/decks/130606/1269669-dimir-commander/it" hreflang="it" />
+<link rel="alternate" href="https://deckstats.net/decks/130606/1269669-dimir-commander/fr" hreflang="fr" />
+<script async src="//deckstats.net/js/t.js"></script>
+
+<script type="text/javascript">
+	    window.cookieconsent_options = {"message":"At deckstats.net we use cookies to remember information between visits and customize our website for you.","dismiss":"Okay!","learnMore":"More info","link":"https:\/\/deckstats.net?lng=en&cookies=1","theme":"dark-bottom"};
+	</script>
+
+
+<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-68718-10']);
+	  _gaq.push(['_setSiteSpeedSampleRate', 10]);
+	  _gaq.push(['_gat._anonymizeIp']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+<script>
+var PATH = "\/\/deckstats.net";
+var LNG = "en";
+var COUNTRY = "US";
+var user_logged_in = false;
+
+//as a function so it can be called when async loading of cardlink is done
+function nk_cardlink_init() {
+	nk_deckstats_lng = LNG;
+	
+	//https://hacks.mozilla.org/2009/07/cross-site-xmlhttprequest-with-cors/
+	try {
+		if (COUNTRY != 'PL' && 'withCredentials' in new XMLHttpRequest()) {
+			nk_cardlink_external = 'https://www.mtg-forum.de/db/get.php';
+		} else {
+			nk_cardlink_external = PATH+'/db_tunnel.php';
+		}
+	} catch(ex) {
+		//this catches IE8, which may not allow 'new XMLHttpRequest()'
+		nk_cardlink_external = PATH+'/db_tunnel.php';
+	}
+		
+	
+	nk_cardlink_lng = (nk_deckstats_lng == 'de'? 'de' : 'en');
+	nk_use_mana_sprites = true;
+	nk_cardlink_all = true;
+};
+
+nk_cardlink_init();
+
+	//SMF data
+	smf_user_id = 0;	
+	smf_user_name = "Guest";
+	//for session validation in comments
+	smf_session_var = "a5a52f78";
+	smf_session_id = "10ee42237e386764463130702959e2de";
+
+	MTG_FORMATS = {"1":"Casual","6":"Standard","4":"Modern","10":"EDH \/ Commander","16":"Brawl","3":"Legacy","2":"Vintage","9":"Pauper","7":"Highlander","12":"Tiny Leaders","13":"Frontier","11":"Peasant","15":"Penny Dreadful","5":"Extended","8":"Cube","14":"Limited"};
+	MTG_CONDITIONS = {"1":{"code":"NM","name":"Mint\/Near-Mint"},"3":{"code":"LP","name":"Lightly Played"},"4":{"code":"MP","name":"Moderately Played"},"5":{"code":"HP","name":"Heavily Played"},"6":{"code":"DM","name":"Damaged"}};
+	MTG_LANGUAGES = {"1":{"flag":"usgb","name":"English","code":"en"},"2":{"flag":"cn","name":"Chinese","code":"cn"},"3":{"flag":"fr","name":"French","code":"fr"},"4":{"flag":"de","name":"German","code":"de"},"5":{"flag":"it","name":"Italian","code":"it"},"6":{"flag":"jp","name":"Japanese","code":"jp"},"7":{"flag":"kr","name":"Korean","code":"kr"},"8":{"flag":"ptbr","name":"Portuguese","code":"pt"},"9":{"flag":"ru","name":"Russian","code":"ru"},"10":{"flag":"es","name":"Spanish","code":"es"}};
+	group_by_options = group_by_options.concat(["section","type","type_extended","color","cc","rarity"]);
+
+	
+	sets_version = 1555711334;
+
+	
+			is_saved = true;
+		is_saved_own = false;
+
+					deck_saved_id = 1269669;
+				deck_json = {"sections":[{"name":"Commander","amount":1,"amount_nonbasic":1,"cards":[{"name":"Grimgrin, Corpse-Born","amount":1,"valid":true,"comment":" !Commander","set_id":0,"set_string":"ISD","data":{"cost":"{3}{U}{B}","color_identity":24,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Legendary Creature","type":"Legendary Creature - Zombie Warrior","rarity":"M","display_set_id":112,"price_miracle":4.95,"price_miracle_other_set":true,"price_mkm":0.99,"price_mkm_id":"250585,204027","price_tcgplayer":5.42,"price_tcgplayer_id":"52214","price_cardhoarder":0.01,"price_cardhoarder_id":"42766","price_cardkingdom":5.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":true,"isFoil":false,"is_custom_set":false,"sets":{"112":"M"}}]},{"name":"Zombies","amount":11,"amount_nonbasic":11,"cards":[{"name":"Army of the Damned","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ISD","data":{"cost":"{5}{B}{B}{B}","color_identity":16,"cc":8,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"M","display_set_id":112,"price_miracle":1.25,"price_miracle_other_set":true,"price_mkm":0.29,"price_mkm_id":"250554,204004","price_tcgplayer":1.9,"price_tcgplayer_id":"52209","price_cardhoarder":0.01,"price_cardhoarder_id":"42520","price_cardkingdom":2.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"112":"M","129":"M","157":"M","210":"M"}},{"name":"Cemetery Reaper","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M12","data":{"cost":"{1}{B}{B}","color_identity":16,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie","rarity":"R","display_set_id":111,"price_miracle":4.45,"price_miracle_other_set":true,"price_mkm":0.8,"price_mkm_id":"247994,10609","price_tcgplayer":3.35,"price_tcgplayer_id":"47673","price_cardhoarder":0.02,"price_cardhoarder_id":"41183","price_cardkingdom":3.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"80":"R","94":"R","111":"R"}},{"name":"Death Baron","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M19","data":{"cost":"{1}{B}{B}","color_identity":16,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie Wizard","rarity":"R","display_set_id":205,"price_miracle":4.95,"price_miracle_other_set":true,"price_mkm":1,"price_mkm_id":"359773,10151","price_tcgplayer":3.85,"price_tcgplayer_id":"168696","price_cardhoarder":0.02,"price_cardhoarder_id":"68341","price_cardkingdom":3.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"71":"R","85":"R","205":"R"}},{"name":"Diregraf Captain","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"DKA","data":{"cost":"{1}{U}{B}","color_identity":24,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie Soldier","rarity":"U","display_set_id":115,"price_miracle":0.99,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"252623,204887","price_tcgplayer":0.33,"price_tcgplayer_id":"57891","price_cardhoarder":0.01,"price_cardhoarder_id":"43315","price_cardkingdom":0.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"115":"U","166":"U"}},{"name":"Diregraf Colossus","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"SOI","data":{"cost":"{2}{B}","color_identity":16,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie Giant","rarity":"R","display_set_id":144,"price_miracle":3.49,"price_miracle_other_set":true,"price_mkm":1.1,"price_mkm_id":"288990,222185","price_tcgplayer":3.08,"price_tcgplayer_id":"115904","price_cardhoarder":0.01,"price_cardhoarder_id":"60034","price_cardkingdom":3.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"144":"R"}},{"name":"Endless Ranks of the Dead","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ISD","data":{"cost":"{2}{B}{B}","color_identity":16,"cc":4,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Enchantment","type":"Enchantment","rarity":"R","display_set_id":112,"price_miracle":5.95,"price_miracle_other_set":true,"price_mkm":1.5,"price_mkm_id":"250556,204006","price_tcgplayer":5.8,"price_tcgplayer_id":"52201","price_cardhoarder":0.01,"price_cardhoarder_id":"42590","price_cardkingdom":7.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"112":"R"}},{"name":"Grave Titan","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M12","data":{"cost":"{4}{B}{B}","color_identity":16,"cc":6,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Giant","rarity":"M","display_set_id":111,"price_miracle":12.95,"price_miracle_other_set":true,"price_mkm":5.49,"price_mkm_id":"248032,200445","price_tcgplayer":15,"price_tcgplayer_id":"47700","price_cardhoarder":1.61,"price_cardhoarder_id":"41295","price_cardkingdom":17.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"93":"M","111":"M","135":"M"}},{"name":"Gravecrawler","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"DKA","data":{"cost":"{B}","color_identity":16,"cc":1,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie","rarity":"R","display_set_id":115,"price_miracle":7.75,"price_miracle_other_set":true,"price_mkm":3.5,"price_mkm_id":"252482,204753","price_tcgplayer":7.2,"price_tcgplayer_id":"57600","price_cardhoarder":0.96,"price_cardhoarder_id":"43175","price_cardkingdom":7.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"115":"R","166":"R"}},{"name":"Gray Merchant of Asphodel","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"THS","data":{"cost":"{3}{B}{B}","color_identity":16,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie","rarity":"C","display_set_id":128,"price_miracle":1.39,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"264040,208641","price_tcgplayer":0.55,"price_tcgplayer_id":"71021","price_cardhoarder":0.03,"price_cardhoarder_id":"50562","price_cardkingdom":0.69},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"128":"C","135":"C"}},{"name":"Lord of the Accursed","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"AKH","data":{"cost":"{2}{B}","color_identity":16,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie","rarity":"U","display_set_id":184,"price_miracle":1.95,"price_miracle_other_set":true,"price_mkm":0.05,"price_mkm_id":"296818,225391","price_tcgplayer":1.75,"price_tcgplayer_id":"130049","price_cardhoarder":0.04,"price_cardhoarder_id":"63800","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"184":"U","216":"U"}},{"name":"Rot Hulk","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GNT","data":{"cost":"{5}{B}{B}","color_identity":16,"cc":7,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie","rarity":"M","display_set_id":216,"price_tcgplayer":10.41,"price_tcgplayer_id":"http:\/\/store.tcgplayer.com\/magic\/product\/show?productname=Rot+Hulk&partner=DCKSTTS","price_tcgplayer_other_set":true,"price_cardhoarder":0.5,"price_cardhoarder_id":"70781","price_cardhoarder_other_set":true,"price_cardkingdom":9.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"216":"M"}}]},{"name":"Combos","amount":4,"amount_nonbasic":4,"cards":[{"name":"Duskmantle Guildmage","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GTC","data":{"cost":"{U}{B}","color_identity":24,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Human Wizard","rarity":"U","display_set_id":124,"price_miracle":1.45,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"259851,207115","price_tcgplayer":0.95,"price_tcgplayer_id":"67379","price_cardhoarder":0.01,"price_cardhoarder_id":"47461","price_cardkingdom":1.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"124":"U"}},{"name":"Exquisite Blood","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"AVR","data":{"cost":"{4}{B}","color_identity":16,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Enchantment","type":"Enchantment","rarity":"R","display_set_id":117,"price_miracle":16.99,"price_miracle_other_set":true,"price_mkm":7.99,"price_mkm_id":"254455,205363","price_tcgplayer":20.32,"price_tcgplayer_id":"58373","price_cardhoarder":0.09,"price_cardhoarder_id":"44049","price_cardkingdom":24.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"117":"R"}},{"name":"Mindcrank","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"NPH","data":{"cost":"{2}","color_identity":2,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":107,"price_miracle":1.25,"price_miracle_other_set":true,"price_mkm":0.1,"price_mkm_id":"245967,202781","price_tcgplayer":1.24,"price_tcgplayer_id":"39544","price_cardhoarder":0.01,"price_cardhoarder_id":"40008","price_cardkingdom":1.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"107":"U","196":"U"}},{"name":"Sanguine Bond","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M14","data":{"cost":"{3}{B}{B}","color_identity":16,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Enchantment","type":"Enchantment","rarity":"R","display_set_id":126,"price_miracle":0.95,"price_miracle_other_set":true,"price_mkm":0.2,"price_mkm_id":"262959,10617","price_tcgplayer":1.19,"price_tcgplayer_id":"69979","price_cardhoarder":0.02,"price_cardhoarder_id":"49179","price_cardkingdom":0.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"80":"R","126":"R","129":"R","193":"R","196":"U"}}]},{"name":"Tutor","amount":6,"amount_nonbasic":6,"cards":[{"name":"Dark Petition","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ORI","data":{"cost":"{3}{B}{B}","color_identity":16,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":138,"price_miracle":2.65,"price_miracle_other_set":true,"price_mkm":0.65,"price_mkm_id":"283373,220214","price_tcgplayer":2.55,"price_tcgplayer_id":"100099","price_cardhoarder":0.2,"price_cardhoarder_id":"57968","price_cardkingdom":3.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"138":"R"}},{"name":"Demonic Tutor","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"UMA","data":{"cost":"{1}{B}","color_identity":16,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"S","display_set_id":226,"price_miracle":22.95,"price_miracle_other_set":true,"price_mkm":14.5,"price_mkm_id":"5541,1436","price_mkm_other_set":true,"price_tcgplayer":29.99,"price_tcgplayer_id":"http:\/\/store.tcgplayer.com\/magic\/product\/show?productname=Demonic+Tutor&partner=DCKSTTS","price_tcgplayer_other_set":true,"price_cardhoarder":6.6,"price_cardhoarder_id":"70259","price_cardkingdom":29.99,"price_cardkingdom_other_set":true},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"5":"U","6":"U","7":"U","8":"U","81":"U","162":"U","191":"M","223":"R","226":"S","233":"S"}},{"name":"Diabolic Intent","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"BBD","data":{"cost":"{1}{B}","color_identity":16,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":204,"price_miracle":5.95,"price_miracle_other_set":true,"price_mkm":4.15,"price_mkm_id":"358568,1478","price_tcgplayer":8.49,"price_tcgplayer_id":"167787","price_cardhoarder":0.42,"price_cardhoarder_id":"69010","price_cardkingdom":8.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"60":"R","188":"M","204":"R"}},{"name":"Diabolic Tutor","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"KLD","data":{"cost":"{2}{B}{B}","color_identity":16,"cc":4,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"U","display_set_id":150,"price_miracle":0.49,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"292819,1481","price_tcgplayer":0.4,"price_tcgplayer_id":"123109","price_cardhoarder":0.02,"price_cardhoarder_id":"61955","price_cardkingdom":0.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"13":"U","16":"U","25":"U","31":"U","80":"U","93":"U","110":"U","111":"U","126":"U","150":"U","155":"U","192":"U"}},{"name":"Fabricate","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M10","data":{"cost":"{2}{U}","color_identity":8,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"U","display_set_id":80,"price_miracle":3.25,"price_miracle_other_set":true,"price_mkm":0.3,"price_mkm_id":"21098,1925","price_tcgplayer":3.9,"price_tcgplayer_id":"32609","price_cardhoarder":0.01,"price_cardhoarder_id":"32915","price_cardkingdom":5.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"49":"U","80":"U","85":"U"}},{"name":"Sidisi, Undead Vizier","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"DTK","data":{"cost":"{3}{B}{B}","color_identity":16,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Legendary Creature","type":"Legendary Creature - Zombie Naga","rarity":"R","display_set_id":137,"price_miracle":7.95,"price_miracle_other_set":true,"price_mkm":2.25,"price_mkm_id":"273080,211131","price_tcgplayer":10,"price_tcgplayer_id":"96362","price_cardhoarder":0.14,"price_cardhoarder_id":"56038","price_cardkingdom":14.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"137":"R"}}]},{"name":"Draw","amount":8,"amount_nonbasic":8,"cards":[{"name":"Baleful Strix","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C16","data":{"cost":"{U}{B}","color_identity":24,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact Creature","type":"Artifact Creature - Bird","rarity":"U","display_set_id":157,"price_miracle":7.95,"price_miracle_other_set":true,"price_mkm":3.5,"price_mkm_id":"293681,205671","price_tcgplayer":8.99,"price_tcgplayer_id":"124399","price_cardhoarder":4.42,"price_cardhoarder_id":"53015","price_cardhoarder_other_set":true,"price_cardkingdom":7.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"118":"U","129":"U","148":"R","157":"U","179":"U","189":"U","191":"R"}},{"name":"Bankrupt in Blood","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"RNA","data":{"cost":"{1}{B}","color_identity":16,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"U","display_set_id":224,"price_miracle":0.25,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"368157,267578","price_tcgplayer":0.19,"price_tcgplayer_id":"183057","price_cardhoarder":0.01,"price_cardhoarder_id":"71124","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"224":"U"}},{"name":"Blood Scrivener","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"DGM","data":{"cost":"{1}{B}","color_identity":16,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie Wizard","rarity":"R","display_set_id":125,"price_miracle":0.45,"price_miracle_other_set":true,"price_mkm":0.03,"price_mkm_id":"261333,207821","price_tcgplayer":0.38,"price_tcgplayer_id":"67896","price_cardhoarder":0.01,"price_cardhoarder_id":"48338","price_cardkingdom":0.35},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"125":"R"}},{"name":"Brainstorm","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C18","data":{"cost":"{U}","color_identity":8,"cc":1,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"U","display_set_id":210,"price_miracle":1.25,"price_miracle_other_set":true,"price_mkm":0.3,"price_mkm_id":"362055,677","price_tcgplayer":0.9,"price_tcgplayer_id":"171438","price_cardhoarder":0.15,"price_cardhoarder_id":"30394","price_cardhoarder_other_set":true,"price_cardkingdom":1.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"3":"C","10":"C","11":"C","53":"C","83":"C","110":"C","121":"C","132":"C","142":"C","148":"U","191":"C","200":"C","208":"R","210":"U"}},{"name":"Mystic Remora","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ICE","data":{"cost":"{U}","color_identity":8,"cc":1,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Enchantment","type":"Enchantment","rarity":"C","display_set_id":11,"price_miracle":3.49,"price_miracle_other_set":true,"price_mkm":1,"price_mkm_id":"6299,3804","price_tcgplayer":2.57,"price_tcgplayer_id":"4815","price_cardhoarder":6.79,"price_cardhoarder_id":"28055","price_cardhoarder_other_set":true,"price_cardkingdom":2.79},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"11":"C","67":"U"}},{"name":"Notion Rain","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GRN","data":{"cost":"{1}{U}{B}","color_identity":24,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"C","display_set_id":212,"price_miracle":0.15,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"364046,265307","price_tcgplayer":0.15,"price_tcgplayer_id":"176445","price_cardhoarder":0.01,"price_cardhoarder_id":"69759","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"212":"C"}},{"name":"Phyrexian Arena","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"9ED","data":{"cost":"{1}{B}{B}","color_identity":16,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Enchantment","type":"Enchantment","rarity":"R","display_set_id":13,"price_miracle":5.75,"price_miracle_other_set":true,"price_mkm":3.2,"price_mkm_id":"12478,4176","price_tcgplayer":9.89,"price_tcgplayer_id":"12765","price_cardhoarder":1.33,"price_cardhoarder_id":"22771","price_cardkingdom":13.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"13":"R","16":"R","47":"R","85":"R","142":"R","155":"R"}},{"name":"Thief of Sanity","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GRN","data":{"cost":"{1}{U}{B}","color_identity":24,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Specter","rarity":"R","display_set_id":212,"price_miracle":3.95,"price_miracle_other_set":true,"price_mkm":1,"price_mkm_id":"364192,265400","price_tcgplayer":4.98,"price_tcgplayer_id":"176941","price_cardhoarder":0.51,"price_cardhoarder_id":"69783","price_cardkingdom":4.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"212":"R"}}]},{"name":"Mill","amount":6,"amount_nonbasic":6,"cards":[{"name":"Consuming Aberration","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GTC","data":{"cost":"{3}{U}{B}","color_identity":24,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Horror","rarity":"R","display_set_id":124,"price_miracle":2.45,"price_miracle_other_set":true,"price_mkm":0.45,"price_mkm_id":"259841,207104","price_tcgplayer":1.95,"price_tcgplayer_id":"67358","price_cardhoarder":0.02,"price_cardhoarder_id":"47899","price_cardkingdom":2.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"124":"R","157":"R","219":"R"}},{"name":"Fleet Swallower","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"XLN","data":{"cost":"{5}{U}{U}","color_identity":8,"cc":7,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Fish","rarity":"R","display_set_id":194,"price_miracle":0.45,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"301757,226988","price_tcgplayer":0.45,"price_tcgplayer_id":"145637","price_cardhoarder":0.01,"price_cardhoarder_id":"65126","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"194":"R"}},{"name":"Mind Grind","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GTC","data":{"cost":"{X}{U}{B}","color_identity":24,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":124,"price_miracle":2.49,"price_miracle_other_set":true,"price_mkm":0.4,"price_mkm_id":"259867,207123","price_tcgplayer":2.17,"price_tcgplayer_id":"67394","price_cardhoarder":0.01,"price_cardhoarder_id":"47671","price_cardkingdom":2.79},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"124":"R"}},{"name":"Sire of Stagnation","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"BFZ","data":{"cost":"{4}{U}{B}","color_identity":24,"cc":6,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Eldrazi","rarity":"M","display_set_id":139,"price_miracle":1.45,"price_miracle_other_set":true,"price_mkm":0.16,"price_mkm_id":"284788,220730","price_tcgplayer":1.03,"price_tcgplayer_id":"105548","price_cardhoarder":0.01,"price_cardhoarder_id":"58717","price_cardkingdom":1.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"139":"M"}},{"name":"Traumatize","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M14","data":{"cost":"{3}{U}{U}","color_identity":8,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":126,"price_miracle":1.75,"price_miracle_other_set":true,"price_mkm":0.2,"price_mkm_id":"262948,6121","price_tcgplayer":2.31,"price_tcgplayer_id":"69968","price_cardhoarder":0.03,"price_cardhoarder_id":"49239","price_cardkingdom":1.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"13":"R","25":"R","31":"R","80":"R","93":"R","126":"R"}},{"name":"Undead Alchemist","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ISD","data":{"cost":"{3}{U}","color_identity":8,"cc":4,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Creature","type":"Creature - Zombie","rarity":"R","display_set_id":112,"price_miracle":0.55,"price_miracle_other_set":true,"price_mkm":0.07,"price_mkm_id":"250576,204018","price_tcgplayer":1.57,"price_tcgplayer_id":"52216","price_cardhoarder":0.01,"price_cardhoarder_id":"42698","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"112":"R"}}]},{"name":"Counter","amount":4,"amount_nonbasic":4,"cards":[{"name":"Counterspell","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"A25","data":{"cost":"{U}{U}","color_identity":8,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"C","display_set_id":200,"price_miracle":1.95,"price_miracle_other_set":true,"price_mkm":0.2,"price_mkm_id":"319041,1158","price_tcgplayer":1.27,"price_tcgplayer_id":"161471","price_cardhoarder":0.15,"price_cardhoarder_id":"67014","price_cardkingdom":0.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"3":"C","4":"U","5":"U","6":"U","7":"U","8":"U","10":"C","11":"C","17":"C","18":"C","19":"C","32":"U","35":"C","53":"C","63":"C","75":"C","83":"U","100":"C","148":"C","165":"C","180":"U","188":"M","191":"C","200":"C","208":"R"}},{"name":"Disallow","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"AER","data":{"cost":"{1}{U}{U}","color_identity":8,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"R","display_set_id":160,"price_miracle":4.45,"price_miracle_other_set":true,"price_mkm":0.49,"price_mkm_id":"294567,224296","price_tcgplayer":3.8,"price_tcgplayer_id":"126406","price_cardhoarder":0.03,"price_cardhoarder_id":"62659","price_cardkingdom":4.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"160":"R"}},{"name":"Psychic Strike","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GTC","data":{"cost":"{1}{U}{B}","color_identity":24,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"C","display_set_id":124,"price_miracle":0.69,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"260084,207285","price_tcgplayer":0.2,"price_tcgplayer_id":"67586","price_cardhoarder":0.01,"price_cardhoarder_id":"47555","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"124":"C"}},{"name":"Sinister Sabotage","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GRN","data":{"cost":"{1}{U}{U}","color_identity":8,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"U","display_set_id":212,"price_miracle":1.99,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"363559,265081","price_tcgplayer":0.7,"price_tcgplayer_id":"175177","price_cardhoarder":0.05,"price_cardhoarder_id":"69481","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"212":"U"}}]},{"name":"Removal","amount":7,"amount_nonbasic":7,"cards":[{"name":"Black Sun's Zenith","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"MBS","data":{"cost":"{X}{B}{B}","color_identity":16,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":99,"price_miracle":4.95,"price_miracle_other_set":true,"price_mkm":1,"price_mkm_id":"245365,202419","price_tcgplayer":3.73,"price_tcgplayer_id":"39086","price_cardhoarder":0.01,"price_cardhoarder_id":"39533","price_cardkingdom":5.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"99":"R","135":"R"}},{"name":"Crux of Fate","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"FRF","data":{"cost":"{3}{B}{B}","color_identity":16,"cc":5,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":136,"price_miracle":1.25,"price_miracle_other_set":true,"price_mkm":0.08,"price_mkm_id":"271475,210709","price_tcgplayer":0.75,"price_tcgplayer_id":"95037","price_cardhoarder":0.02,"price_cardhoarder_id":"55450","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"136":"R","193":"R"}},{"name":"Cyclonic Rift","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"MM3","data":{"cost":"{1}{U}","color_identity":8,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"R","display_set_id":185,"price_miracle":17.95,"price_miracle_other_set":true,"price_mkm":8.99,"price_mkm_id":"295924,206487","price_tcgplayer":23.05,"price_tcgplayer_id":"128856","price_cardhoarder":0.31,"price_cardhoarder_id":"63403","price_cardkingdom":25.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"120":"R","135":"R","185":"R"}},{"name":"Deadly Tempest","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C15","data":{"cost":"{4}{B}{B}","color_identity":16,"cc":6,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Sorcery","type":"Sorcery","rarity":"R","display_set_id":142,"price_miracle":1.65,"price_miracle_other_set":true,"price_mkm":0.35,"price_mkm_id":"285756,221060","price_tcgplayer":4.14,"price_tcgplayer_id":"107808","price_cardhoarder":4.42,"price_cardhoarder_id":"59159","price_cardhoarder_other_set":true,"price_cardkingdom":4.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"142":"R"}},{"name":"Hero's Downfall","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"THS","data":{"cost":"{1}{B}{B}","color_identity":16,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"R","display_set_id":128,"price_miracle":3.25,"price_miracle_other_set":true,"price_mkm":0.99,"price_mkm_id":"264114,208688","price_tcgplayer":3.03,"price_tcgplayer_id":"71183","price_cardhoarder":0.02,"price_cardhoarder_id":"50596","price_cardkingdom":4.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"128":"R"}},{"name":"Nevinyrral's Disk","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C17","data":{"cost":"{4}","color_identity":2,"cc":4,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"R","display_set_id":193,"price_miracle":1.49,"price_miracle_other_set":true,"price_mkm":0.39,"price_mkm_id":"300530,3884","price_tcgplayer":1.75,"price_tcgplayer_id":"139994","price_cardhoarder":0.02,"price_cardhoarder_id":"52897","price_cardhoarder_other_set":true,"price_cardkingdom":2.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"3":"R","4":"R","5":"R","6":"R","7":"R","8":"R","67":"R","82":"R","96":"M","129":"R","135":"R","148":"R","157":"R","191":"R","193":"R"}},{"name":"Ratchet Bomb","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M14","data":{"cost":"{2}","color_identity":2,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"R","display_set_id":126,"price_miracle":1.25,"price_miracle_other_set":true,"price_mkm":0.4,"price_mkm_id":"262371,200749","price_tcgplayer":1.63,"price_tcgplayer_id":"69182","price_cardhoarder":0.33,"price_cardhoarder_id":"49231","price_cardkingdom":1.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"97":"R","126":"R"}}]},{"name":"Rest","amount":5,"amount_nonbasic":5,"cards":[{"name":"Lightning Greaves","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"MRD","data":{"cost":"{2}","color_identity":2,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact - Equipment","rarity":"U","display_set_id":49,"price_miracle":3.75,"price_miracle_other_set":true,"price_mkm":1.49,"price_mkm_id":"199,3297","price_tcgplayer":7.91,"price_tcgplayer_id":"11512","price_cardhoarder":0.04,"price_cardhoarder_id":"19737","price_cardkingdom":9.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"49":"U","92":"U","94":"U","110":"U","142":"U","156":"M","157":"U","177":"M","192":"U","193":"U","206":"U"}},{"name":"Mission Briefing","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GRN","data":{"cost":"{U}{U}","color_identity":8,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Instant","type":"Instant","rarity":"R","display_set_id":212,"price_miracle":3.25,"price_miracle_other_set":true,"price_mkm":0.5,"price_mkm_id":"364107,265336","price_tcgplayer":1.79,"price_tcgplayer_id":"176561","price_cardhoarder":0.66,"price_cardhoarder_id":"69461","price_cardkingdom":1.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"212":"R"}},{"name":"Sensei's Divining Top","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"CHK","data":{"cost":"{1}","color_identity":2,"cc":1,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":54,"price_miracle":15.95,"price_miracle_other_set":true,"price_mkm":4,"price_mkm_id":"12179,7146","price_tcgplayer":29.35,"price_tcgplayer_id":"12160","price_cardhoarder":0.53,"price_cardhoarder_id":"21045","price_cardkingdom":29.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"54":"U","95":"M","148":"R"}},{"name":"Swiftfoot Boots","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M12","data":{"cost":"{2}","color_identity":2,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact - Equipment","rarity":"U","display_set_id":111,"price_miracle":0.75,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"247962,203495","price_tcgplayer":1.95,"price_tcgplayer_id":"47267","price_cardhoarder":0.05,"price_cardhoarder_id":"41445","price_cardkingdom":1.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"111":"U","129":"U","135":"U","142":"U","157":"U","192":"U","193":"U","200":"U","206":"U","210":"U"}},{"name":"The Haunt of Hightower","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"RNA","data":{"cost":"{4}{B}{B}","color_identity":16,"cc":6,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Legendary Creature","type":"Legendary Creature - Vampire","rarity":"M","display_set_id":224,"price_miracle":5.95,"price_miracle_other_set":true,"price_tcgplayer":4.75,"price_tcgplayer_id":"http:\/\/store.tcgplayer.com\/magic\/product\/show?productname=The+Haunt+of+Hightower&partner=DCKSTTS","price_tcgplayer_other_set":true,"price_cardhoarder":0.33,"price_cardhoarder_id":"71000","price_cardkingdom":3.99,"price_cardkingdom_other_set":true},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"224":"M"}}]},{"name":"Ramp","amount":12,"amount_nonbasic":12,"cards":[{"name":"Burnished Hart","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"THS","data":{"cost":"{3}","color_identity":2,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact Creature","type":"Artifact Creature - Elk","rarity":"U","display_set_id":128,"price_miracle":1.99,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"264287,208815","price_tcgplayer":1.99,"price_tcgplayer_id":"71405","price_cardhoarder":0.01,"price_cardhoarder_id":"50248","price_cardkingdom":2.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"128":"U","135":"U","142":"U"}},{"name":"Coldsteel Heart","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"CSP","data":{"cost":"{2}","color_identity":2,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Snow Artifact","type":"Snow Artifact","rarity":"U","display_set_id":43,"price_miracle":0.75,"price_miracle_other_set":true,"price_mkm":0.1,"price_mkm_id":"13623,8176","price_tcgplayer":2.55,"price_tcgplayer_id":"14016","price_cardhoarder":0.92,"price_cardhoarder_id":"24529","price_cardkingdom":3.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"43":"U","142":"U","206":"U"}},{"name":"Commander's Sphere","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C18","data":{"cost":"{3}","color_identity":2,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"C","display_set_id":210,"price_miracle":0.29,"price_miracle_other_set":true,"price_mkm":0.1,"price_mkm_id":"361957,210511","price_tcgplayer":1.74,"price_tcgplayer_id":"171114","price_cardhoarder":5.22,"price_cardhoarder_id":"55141","price_cardhoarder_other_set":true,"price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"135":"C","157":"C","192":"C","193":"C","206":"C","210":"C"}},{"name":"Dimir Locket","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GRN","data":{"cost":"{3}","color_identity":24,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"C","display_set_id":212,"price_miracle":0.1,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"363976,265295","price_tcgplayer":0.14,"price_tcgplayer_id":"176434","price_cardhoarder":0.01,"price_cardhoarder_id":"69881","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"212":"C"}},{"name":"Dimir Signet","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"MM3","data":{"cost":"{2}","color_identity":24,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":185,"price_miracle":0.45,"price_miracle_other_set":true,"price_mkm":0.1,"price_mkm_id":"295896,7936","price_tcgplayer":1.42,"price_tcgplayer_id":"128641","price_cardhoarder":0.03,"price_cardhoarder_id":"63385","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"52":"C","94":"C","110":"C","185":"U","206":"C","210":"U","219":"C"}},{"name":"Mind Stone","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"10ED","data":{"cost":"{2}","color_identity":2,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":31,"price_miracle":0.29,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"16499,3601","price_tcgplayer":0.99,"price_tcgplayer_id":"15218","price_cardhoarder":0.06,"price_cardhoarder_id":"27044","price_cardkingdom":1.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"26":"C","31":"U","75":"U","135":"U","142":"U","165":"U","172":"U","196":"C","206":"U","210":"C"}},{"name":"Rooftop Storm","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ISD","data":{"cost":"{5}{U}","color_identity":8,"cc":6,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Enchantment","type":"Enchantment","rarity":"R","display_set_id":112,"price_miracle":0.49,"price_miracle_other_set":true,"price_mkm":0.1,"price_mkm_id":"250455,203989","price_tcgplayer":1.88,"price_tcgplayer_id":"52196","price_cardhoarder":0.01,"price_cardhoarder_id":"42492","price_cardkingdom":2.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"112":"R"}},{"name":"Sol Ring","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C18","data":{"cost":"{1}","color_identity":2,"cc":1,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":210,"price_miracle":2.49,"price_miracle_other_set":true,"price_mkm":1.07,"price_mkm_id":"361935,5359","price_tcgplayer":4.8,"price_tcgplayer_id":"171158","price_cardhoarder":6.35,"price_cardhoarder_id":"52899","price_cardhoarder_other_set":true,"price_cardkingdom":4.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"5":"U","6":"U","7":"U","8":"U","96":"M","100":"R","110":"U","129":"U","135":"U","142":"U","156":"M","157":"U","177":"M","191":"M","192":"U","193":"U","206":"U","210":"U"}},{"name":"Solemn Simulacrum","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"M12","data":{"cost":"{4}","color_identity":2,"cc":4,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact Creature","type":"Artifact Creature - - Golem","rarity":"R","display_set_id":111,"price_miracle":3.95,"price_miracle_other_set":true,"price_mkm":1.25,"price_mkm_id":"247961,5375","price_tcgplayer":5.26,"price_tcgplayer_id":"47656","price_cardhoarder":0.92,"price_cardhoarder_id":"41545","price_cardkingdom":7.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"49":"R","110":"R","111":"R","135":"R","142":"R","156":"M","157":"R","177":"M","202":"R","206":"R"}},{"name":"Talisman of Dominance","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"MRD","data":{"cost":"{2}","color_identity":24,"cc":2,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":49,"price_miracle":0.45,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"253,5800","price_tcgplayer":1.49,"price_tcgplayer_id":"11561","price_cardhoarder":0.03,"price_cardhoarder_id":"19679","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"49":"U","189":"U"}},{"name":"Unstable Obelisk","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C18","data":{"cost":"{3}","color_identity":2,"cc":3,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"U","display_set_id":210,"price_miracle":0.2,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"361930,210462","price_tcgplayer":0.29,"price_tcgplayer_id":"171166","price_cardhoarder":4.6,"price_cardhoarder_id":"55113","price_cardhoarder_other_set":true,"price_cardkingdom":0.59},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"135":"U","193":"U","206":"U","210":"U"}},{"name":"Wayfarer's Bauble","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"MM2","data":{"cost":"{1}","color_identity":2,"cc":1,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Artifact","type":"Artifact","rarity":"C","display_set_id":141,"price_miracle":0.15,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"283052,6550","price_tcgplayer":0.72,"price_tcgplayer_id":"98907","price_cardhoarder":0.03,"price_cardhoarder_id":"57390","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"15":"C","129":"C","135":"C","141":"C","142":"C","193":"C","206":"C"}}]},{"name":"Lands","amount":36,"amount_nonbasic":13,"cards":[{"name":"Bojuka Bog","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"WWK","data":{"cost":"","color_identity":16,"cc":0,"source":{"w":0,"u":0,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"C","display_set_id":88,"price_miracle":0.85,"price_miracle_other_set":true,"price_mkm":0.25,"price_mkm_id":"22182,11020","price_tcgplayer":1.99,"price_tcgplayer_id":"34339","price_cardhoarder":0.32,"price_cardhoarder_id":"35515","price_cardkingdom":2.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"88":"C","110":"C","129":"C","135":"C","192":"C","193":"C","210":"C"}},{"name":"Choked Estuary","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"SOI","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"R","display_set_id":144,"price_miracle":2.25,"price_miracle_other_set":true,"price_mkm":0.27,"price_mkm_id":"289068,222219","price_tcgplayer":1.51,"price_tcgplayer_id":"115920","price_cardhoarder":0.26,"price_cardhoarder_id":"59920","price_cardkingdom":2.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"144":"R"}},{"name":"Command Tower","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"C18","data":{"cost":"","color_identity":2,"cc":0,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":0,"any":1},"supertype":"Land","type":"Land","rarity":"C","display_set_id":210,"price_miracle":0.99,"price_miracle_other_set":true,"price_mkm":0.2,"price_mkm_id":"361917,203332","price_tcgplayer":2.36,"price_tcgplayer_id":"171193","price_cardhoarder":1.01,"price_cardhoarder_id":"47979","price_cardhoarder_other_set":true,"price_cardkingdom":2.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"110":"C","129":"C","142":"C","157":"C","161":"C","192":"C","193":"C","206":"C","210":"C"}},{"name":"Darkslick Shores","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"SOM","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"R","display_set_id":97,"price_miracle":11.95,"price_miracle_other_set":true,"price_mkm":6.5,"price_mkm_id":"242651,200764","price_tcgplayer":12.49,"price_tcgplayer_id":"36401","price_cardhoarder":1.24,"price_cardhoarder_id":"38291","price_cardkingdom":14.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"97":"R"}},{"name":"Drowned Catacomb","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"XLN","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"R","display_set_id":194,"price_miracle":4.99,"price_miracle_other_set":true,"price_mkm":3.49,"price_mkm_id":"301230,10669","price_tcgplayer":6.58,"price_tcgplayer_id":"142036","price_cardhoarder":0.1,"price_cardhoarder_id":"65536","price_cardkingdom":6.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"80":"R","93":"R","111":"R","119":"R","189":"R","194":"R"}},{"name":"Fetid Pools","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"AKH","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land - Island Swamp","rarity":"R","display_set_id":184,"price_miracle":3.45,"price_miracle_other_set":true,"price_mkm":0.39,"price_mkm_id":"296676,225263","price_tcgplayer":2.26,"price_tcgplayer_id":"129682","price_cardhoarder":0.02,"price_cardhoarder_id":"64148","price_cardkingdom":2.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"184":"R"}},{"name":"Ghost Quarter","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"ISD","data":{"cost":"","color_identity":2,"cc":0,"source":{"w":0,"u":0,"b":0,"r":0,"g":0,"colorless":1,"any":0},"supertype":"Land","type":"Land","rarity":"U","display_set_id":112,"price_miracle":1.45,"price_miracle_other_set":true,"price_mkm":0.39,"price_mkm_id":"250415,7587","price_tcgplayer":1.56,"price_tcgplayer_id":"52174","price_cardhoarder":0.05,"price_cardhoarder_id":"42294","price_cardkingdom":1.49},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"51":"U","112":"U","135":"U","142":"U","178":"U","192":"U","206":"U"}},{"name":"Halimar Depths","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"WWK","data":{"cost":"","color_identity":8,"cc":0,"source":{"w":0,"u":1,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"C","display_set_id":88,"price_miracle":0.39,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"22181,11019","price_tcgplayer":0.61,"price_tcgplayer_id":"34377","price_cardhoarder":0.01,"price_cardhoarder_id":"35521","price_cardkingdom":0.79},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"88":"C","169":"C","210":"C"}},{"name":"Island","amount":10,"valid":true,"comment":"","set_id":0,"set_string":"RNA","data":{"cost":"","color_identity":1,"cc":0,"source":{"w":0,"u":1,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Basic Land","type":"Basic Land - - Island","rarity":"L","display_set_id":224,"price_miracle":0.15,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"971,2923","price_mkm_other_set":true,"price_tcgplayer":0.1,"price_tcgplayer_id":"183581","price_cardhoarder":0.01,"price_cardhoarder_id":"70976","price_cardkingdom":0.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"3":"L","4":"L","5":"L","6":"L","7":"L","8":"L","10":"L","11":"L","12":"C","13":"L","14":"L","16":"L","17":"L","18":"L","19":"L","23":"L","24":"L","25":"L","30":"L","31":"L","32":"L","33":"L","34":"L","35":"L","37":"L","49":"L","52":"L","53":"L","54":"L","58":"L","59":"L","63":"L","65":"L","69":"L","71":"L","75":"L","80":"L","82":"L","84":"L","85":"L","86":"L","89":"L","91":"L","92":"L","93":"L","94":"L","97":"L","98":"L","99":"L","107":"L","110":"L","111":"L","112":"L","113":"L","117":"L","118":"L","119":"L","120":"L","121":"L","122":"L","126":"L","128":"L","129":"L","133":"L","134":"L","135":"L","136":"L","137":"L","138":"L","139":"L","142":"L","144":"L","150":"L","157":"L","165":"L","166":"L","167":"L","169":"L","171":"L","179":"L","180":"L","184":"L","186":"L","187":"L","189":"L","192":"L","193":"L","194":"L","195":"L","197":"L","198":"L","201":"L","202":"L","204":"L","205":"L","206":"L","207":"L","210":"L","212":"L","216":"L","219":"L","221":"L","224":"L","227":"L","228":"L","232":"L"}},{"name":"Memorial to Folly","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"DOM","data":{"cost":"","color_identity":16,"cc":0,"source":{"w":0,"u":0,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"U","display_set_id":201,"price_miracle":0.55,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"327198,244179","price_tcgplayer":0.33,"price_tcgplayer_id":"164237","price_cardhoarder":0.03,"price_cardhoarder_id":"67949","price_cardkingdom":0.39},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"201":"U"}},{"name":"Memorial to Genius","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"DOM","data":{"cost":"","color_identity":8,"cc":0,"source":{"w":0,"u":1,"b":0,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land","rarity":"U","display_set_id":201,"price_miracle":0.2,"price_miracle_other_set":true,"price_mkm":0.02,"price_mkm_id":"327197,244178","price_tcgplayer":0.25,"price_tcgplayer_id":"164238","price_cardhoarder":0.01,"price_cardhoarder_id":"67951","price_cardkingdom":0.25},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"201":"U"}},{"name":"Sunken Hollow","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"BFZ","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land - Island Swamp","rarity":"R","display_set_id":139,"price_miracle":3.45,"price_miracle_other_set":true,"price_mkm":0.65,"price_mkm_id":"284310,220617","price_tcgplayer":3.1,"price_tcgplayer_id":"104305","price_cardhoarder":0.07,"price_cardhoarder_id":"58659","price_cardkingdom":3.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"139":"R","145":"M"}},{"name":"Swamp","amount":13,"valid":true,"comment":"","set_id":0,"set_string":"RNA","data":{"cost":"","color_identity":1,"cc":0,"source":{"w":0,"u":0,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Basic Land","type":"Basic Land - - Swamp","rarity":"L","display_set_id":224,"price_miracle":0.15,"price_miracle_other_set":true,"price_mkm":0.01,"price_mkm_id":"298,5739","price_mkm_other_set":true,"price_tcgplayer":0.09,"price_tcgplayer_id":"183582","price_cardhoarder":0.01,"price_cardhoarder_id":"70978","price_cardkingdom":0.29},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"3":"L","4":"L","5":"L","6":"L","7":"L","8":"L","10":"L","11":"L","12":"C","13":"L","14":"L","16":"L","17":"L","18":"L","19":"L","23":"L","24":"L","25":"L","30":"L","31":"L","32":"L","33":"L","34":"L","35":"L","37":"L","49":"L","52":"L","53":"L","54":"L","58":"L","59":"L","63":"L","65":"L","69":"L","71":"L","80":"L","81":"L","82":"L","84":"L","85":"L","86":"L","87":"L","89":"L","91":"L","92":"L","93":"L","94":"L","97":"L","99":"L","107":"L","110":"L","111":"L","112":"L","113":"L","116":"L","117":"L","118":"L","119":"L","120":"L","121":"L","126":"L","127":"L","128":"L","129":"L","133":"L","134":"L","135":"L","136":"L","137":"L","138":"L","139":"L","142":"L","144":"L","150":"L","157":"L","162":"L","164":"L","166":"L","169":"L","170":"L","171":"L","172":"L","178":"L","179":"L","180":"L","184":"L","187":"L","189":"L","192":"L","193":"L","194":"L","195":"L","197":"L","201":"L","204":"L","205":"L","206":"L","210":"L","212":"L","216":"L","219":"L","220":"L","224":"L","227":"L","230":"L","231":"L"}},{"name":"Underground River","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"10ED","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":1,"any":0},"supertype":"Land","type":"Land","rarity":"R","display_set_id":31,"price_miracle":2.75,"price_miracle_other_set":true,"price_mkm":1.05,"price_mkm_id":"16526,6210","price_tcgplayer":4.99,"price_tcgplayer_id":"15378","price_cardhoarder":0.43,"price_cardhoarder_id":"27438","price_cardkingdom":7.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"3":"R","11":"R","13":"R","17":"R","18":"R","31":"R","157":"R","206":"R"}},{"name":"Watery Grave","amount":1,"valid":true,"comment":"","set_id":0,"set_string":"GRN","data":{"cost":"","color_identity":24,"cc":0,"source":{"w":0,"u":1,"b":1,"r":0,"g":0,"colorless":0,"any":0},"supertype":"Land","type":"Land - Island Swamp","rarity":"R","display_set_id":212,"price_miracle":10.25,"price_miracle_other_set":true,"price_mkm":6.5,"price_mkm_id":"363550,8146","price_tcgplayer":11.99,"price_tcgplayer_id":"175205","price_cardhoarder":1.01,"price_cardhoarder_id":"69931","price_cardkingdom":14.99},"override":[],"isSideboard":false,"isMaybe":false,"isCommander":false,"isFoil":false,"is_custom_set":false,"sets":{"52":"R","124":"R","145":"M","212":"R"}}]}],"sideboard":[],"maybeboard":[],"name":"Dimir Commander","number_main":100,"number_main_nonbasic":77,"number_sideboard":0,"number_sideboard_nonbasic":0,"number_maybe":0,"group_by":"section"};
+		deck_url = "https:\/\/deckstats.net\/decks\/130606\/1269669-dimir-commander";
+
+		init_deck_json();
+		
+	$(function(){ init_stats_page();deck_details_table_columns = ["type","mana","set","price_miracle","price_tcgplayer","price_cardhoarder"];init_deck(); });</script> <meta name="viewport" content="width=device-width" />
+
+
+
+
+<link rel="stylesheet" href="//deckstats.net/css/merged/merged.base.1555259189.css">
+<link rel="stylesheet" href="//deckstats.net/css/print.1532811909.css" media="print">
+</head>
+<body class="">
+<div id="header_container">
+<div id='header_left'>
+<a href='https://deckstats.net?lng=en'>
+<img src="https://deckstats.net/img/header_deckstats.png" srcset="https://deckstats.net/img/header_deckstats.png 375w,https://deckstats.net/img/header_deckstats_2x.png 750w" alt="deckstats.net" style="width: 375px; height: 90px;" />
+</a>
+</div>
+<div id='header_right' class="XX_US_XX">
+<div class="header_small_hide" id="header_right_big">
+<iframe scrolling="no" src="https://content.tcg20life.com/tcgafa2.html?pk=DCKSTTS2&amp;categoryId=1&camp;ampaign=affiliate&amp;source=DCKSTTS2&amp;medium=DCKSTTS2" style="width: 728px; height: 90px; border: 0; background: transparent; overflow: hidden; float: right;"></iframe>
+</div>
+</div>
+</div>
+<div class="small_screen_submenu_container">
+<div class="small_screen_logo">
+<a href='https://deckstats.net?lng=en'>
+<img src="https://deckstats.net/apple-touch-icon.png" alt="deckstats.net" style="width: 30px; height: 30px;" />
+</a>
+</div>
+<div id="submenu">
+<div class="small_screen_toggle_button">&#9776; Menu</div>
+<p class="home small_screen_toggle_content">
+<a href='https://deckstats.net?lng=en'>Home</a>
+<a href='https://deckstats.net/deckbuilder/en/'>Deckbuilder</a>
+<a href='https://deckstats.net/forum/?language=english-utf8'>Forum</a>
+<a href='https://deckstats.net/decks/?lng=en'>Decks</a>
+<a href='https://deckstats.net/decks/top/?lng=en'>Top Decks</a>
+<a href='https://deckstats.net/decks/search/?lng=en'>Deck Search</a>
+<a href='https://deckstats.net/sets/?lng=en'>Sets</a>
+</p>
+<div id="user_in_header" class="login_in_header">
+<a href="#" id="login_menu_segment" class="segment rightmost_segment"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+<div id="login_register_segments">
+<form action="https://deckstats.net/forum/index.php?language=english-utf8&amp;action=login2" method="post" accept-charset="UTF-8" id="login_form_in_header">
+<input type="hidden" name="a5a52f78" value="10ee42237e386764463130702959e2de" />
+<div class="segment_container">
+<div class="login_register_dialog_row">
+<input type="text" name="user" size="10" class="text" placeholder="Username" />
+</div>
+<div class="login_register_dialog_row">
+<input type="password" name="passwrd" size="10" class="text" placeholder="Password" />
+<input type="hidden" name="cookielength" value="-1" />
+</div>
+<div class="login_register_dialog_row">
+<a href="#" id="user_login_segment">
+Login </a>
+</div>
+</div>
+</form>
+<div class="login_register_dialog_row">
+<a href="https://deckstats.net/forum/index.php?language=english-utf8&amp;action=register" id="user_register_segment" class="rightmost_segment">
+Register </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="deckstats_main_container">
+<div id="eventbar_toggle"></div>
+<div id="eventbar_container">
+<div id="eventbar"></div>
+</div>
+<div id="page_title_container">
+<h2 id="subtitle">Dimir Commander (<a href="https://deckstats.net/decks/f/edh-commander/?lng=en">EDH / Commander</a>)</h2><div id="post_subtitle"><div id="deck_folder_subtitle">in <a href="https://deckstats.net/decks/130606/?lng=en"><i class="fa fa-user" aria-hidden="true"></i> qTdomax's Decks</a></div></div> </div>
+<div id="page_container">
+<div id="page">
+<script>
+	edit_deck_id = 1269669;
+	copy_deck_id = 0;
+	deck_like_members = [];
+
+			deck_id_type = 'saved';
+		deck_id = 1269669;
+		deck_owner_id = 130606;
+		deck_key = "";
+		deck_revision1 = 1;
+		
+	deck_updated = 1555795942;
+	deck_cmc = 3.3125;
+	</script>
+<div class="deck_buttonbar">
+<div class="deck_buttonbar_left">
+<div class="deck_buttonbar_left_inner">
+<div id="like_deck_buttons">
+<button type="button" id="deck_like_counter">
+<span id="deck_like_text">&hellip;</span>
+</button>
+</div>
+<script> 
+					$(function() {
+						init_deck_like(
+							0,
+							0,
+							0						);
+					});
+				</script>
+</div>
+</div>
+<div class="deck_buttonbar_right">
+<button type="button" id="deck_tools" class="deck_buttonbar_button_wide">
+Deck Tools 
+</button>
+<ul id="deck_tools_menu" class="deck_menu">
+<li><a href="#" id="view_decklist_link">
+View Decklist </a></li>
+<li><a href="#" onclick="download_deck_dialog.dialog('open'); return false;">
+Download Deck </a></li>
+<li><a href="https://deckstats.net/decks/130606/1269669-dimir-commander/en?proxies=1" onclick="window.open(this.href, '_blank'); return false;">
+Print Proxies </a></li>
+<li><a href="#" onclick="download_regsheet_dialog.dialog('open'); return false;">
+Print Deck Sheet </a></li>
+<li><a href="https://deckstats.net/decks/compare/1269669-1/0-0/en">
+Compare Deck </a></li>
+<li id="copy_deck_in_menu"><a href="https://deckstats.net/decks/130606/1269669-dimir-commander/en?show_form=1&amp;is_copy=1">
+Copy Deck </a></li>
+</ul>
+<button type="button" id="deck_view_button" class="deck_buttonbar_button_wide">
+View </button>
+<ul id="deck_view_menu" class="deck_menu">
+<li class="deck_view_menu_item"><a href="#" class="deck_view_menu_columns">
+Select card table columns </a></li>
+<li class="deck_menu_header"><div>Card grouping:</div></li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="collection" style="display: none;">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Collection status</div>
+</a>
+</li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="section">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Custom sections</div>
+</a>
+</li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="type">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Type</div>
+</a>
+</li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="type_extended">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Type (extended)</div>
+</a>
+</li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="color">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Color</div>
+</a>
+</li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="cc">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Converted Cost (CC)</div>
+</a>
+</li>
+<li class="deck_view_menu_item deck_view_menu_regroup_option" data-value="rarity">
+<a href="#" class="deck_view_menu_item_flex">
+<div class="deck_view_menu_item_flex_icon"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+<div class="deck_view_menu_item_flex_text">Rarity</div>
+</a>
+</li>
+</ul>
+<a class="button" id="copy_deck" href="https://deckstats.net/decks/130606/1269669-dimir-commander/en?show_form=1&amp;is_copy=1">
+Copy Deck </a>
+</div>
+</div> <div class="any_dialog" id="save_please_login_dialog" title="Save Deck">
+<p>To save your deck, please login with your username and password!</p>
+</div>
+<div class="any_dialog" id="deck_like_members_dialog" title="People who like this deck">
+<ul id="deck_like_members_list"></ul>
+<div id="deck_like_none">This deck does not have any likes yet.</div>
+</div>
+<div class="any_dialog" id="view_decklist_dialog" title="View Decklist">
+<textarea id="view_decklist" readonly="readonly" rows="10" cols="40" class="text ui-corner-all"></textarea>
+<div class="input_row">
+<label>
+Card grouping: <select id="view_decklist_dialog_group_by">
+<option value="section">
+Custom sections </option>
+<option value="type">
+Type </option>
+<option value="type_extended">
+Type (extended) </option>
+<option value="color">
+Color </option>
+<option value="cc">
+Converted Cost (CC) </option>
+<option value="rarity">
+Rarity </option>
+</select>
+</label>
+</div>
+</div>
+<div class="any_dialog" id="download_deck_dialog" title="Download Deck">
+<p>For most Magic software, including Magic Workstation and Cockatrice:</p>
+<button data-format="dec">
+<span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+Download as .dec
+</button>
+<p>For MTG Arena:</p>
+<button data-format="mtgarena">
+<span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+Download as MTG Arena .txt
+</button>
+<p>For Magic Online (MTGO):</p>
+<button data-format="mtgo">
+<span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+Download as MTGO .txt
+</button>
+<p>For others:</p>
+<button data-format="txt">
+<span class="ui-icon ui-icon-arrowthickstop-1-s"></span>
+Download as .txt
+</button>
+<p>
+<label>
+<input id="download_deck_include_comments" checked="checked" type="checkbox">
+Include card comments (.dec)
+</label>
+</p>
+</div>
+<div class="any_dialog" id="download_regsheet_dialog" title="Download Deck Sheet">
+<p>
+To play your deck at an official ("DCI-sanctioned") tournament you need a deck registration sheet. Here you can download such a sheet pre-filled with the cards in this deck!	</p>
+<div style="margin-top: .5em">
+<label for="download_regsheet_sort">Sort cards by:</label>
+<select id="download_regsheet_sort" class="ui-corner-all">
+<option value="name">Card Name</option>
+<option value="amount">Amount</option>
+<option value="type">Type</option>
+<option value="none">do not sort</option>
+</select>
+</div>
+<div style="margin-top: .5em">
+<label>
+<input type="checkbox" checked="checked" id="download_regsheet_dci_details">
+Include my DCI number and name </label>
+(-&gt;
+<a href="https://deckstats.net/settings/?lng=en" target="_blank">
+Your Settings</a>)
+</div>
+<p>
+<i>
+Please note: This is not an official DCI service. So please always make extra sure that the sheet contains all the cards in your deck and fulfils all DCI requirements. If you notice anything wrong, please let us know! DCI is a trademark of of Wizards of the Coast LLC.
+</i>
+</p>
+</div>
+<div class="any_dialog" id="deck_columns_dialog" title="Select columns">
+<div class="inhalt2">
+Please select the columns you would like to see:	</div>
+<div class="inhalt2">
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_type" value="type" checked="checked">
+Type </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_mana" value="mana" checked="checked">
+Mana </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_color_identity" value="color_identity" checked="checked">
+Color Identity </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_set" value="set" checked="checked">
+Set </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_price_miracle" value="price_miracle" checked="checked">
+Price (Germany - miraclegames.de) </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_price_mkm" value="price_mkm" checked="checked">
+Price (Europe - cardmarket.com) </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_price_tcgplayer" value="price_tcgplayer" checked="checked">
+Price (USA - tcgplayer.com) </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_price_cardkingdom" value="price_cardkingdom" checked="checked">
+Price (USA - cardkingdom.com) </label>
+<label style="display: block; margin: 4px 0;">
+<input type="checkbox" class="deck_columns_dialog_toggle" id="deck_columns_dialog_toggle_price_cardhoarder" value="price_cardhoarder" checked="checked">
+Price (Online - cardhoarder.com) </label>
+</div>
+<div class="inhalt2">
+<label>
+<input type="checkbox" id="deck_columns_dialog_remember" checked="checked">
+Remember these settings (requires an account)
+</label>
+</div>
+</div>
+<div>
+</div>
+<div id="deck_tabs">
+<div id="deck_tabs_bar_container">
+<ul id="deck_tabs_bar">
+<li><a href="#deck_tabs-overview"><span class="fa fa-file-text-o"></span> Overview</a></li>
+<li><a href="#deck_tabs-stats"><span class="fa fa-table"></span> Details</a></li>
+
+<li id="deck_tabs_plots_link"><a href="#deck_tabs-plots"><span class="fa fa-bar-chart"></span> Charts</a></li>
+<li><a href="#deck_tabs-spoiler"><span class="fa fa-image"></span> Visual Spoiler</a></li>
+<li><a href="#deck_tabs-hand"><span class="fa fa-hand-paper-o"></span> Starting Hand</a></li>
+<li><a href="#deck_tabs-probcalc"><span class="fa fa-lightbulb-o"></span> Probabilities</a></li>
+<li style="font-weight: bold;"><a href="#deck_tabs-edh"><span class="fa fa-magic"></span> EDH Suggestions</a></li>
+<li><a href="#deck_tabs-tools"><span class="fa fa-link"></span> Share/Export</a></li>
+<li><a href="#deck_tabs-comments"><span class="fa fa-comments"></span> Discuss<span id="comment_count"></span></a></li> </ul>
+<div id="deck_tab_scroll_left"><span class="ui-icon ui-icon-triangle-1-w"></span></div>
+<div id="deck_tab_scroll_right"><span class="ui-icon ui-icon-triangle-1-e"></span></div>
+</div>
+<div id="deck_tabs-overview">
+<div class="inhalt">
+<div id="deck_overview" class="element_loading">
+<div id="deck_overview_main">
+<div id="deck_overview_cards"></div>
+<div id="deck_overview_info">
+<h3>
+Tags </h3>
+<div class="deck_overview_section_content deck_overview_info_tags">
+<div id="deck_tags_list">
+<div id="deck_tags_list_tags">
+<a href="https://deckstats.net/decks/search/?lng=en&amp;search_tags=Dimir" class="deck_tags_list_tag">Dimir</a> <a href="https://deckstats.net/decks/search/?lng=en&amp;search_tags=Commander" class="deck_tags_list_tag">Commander</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="deck_overview_links">
+<div>
+<div class="deck_commander deck_overview_commander"></div>
+<div class="deck_footer_row deck_overview_banner">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-8795966327908133" data-ad-slot="5258196207"></ins>
+<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+</div>
+<div class="deck_buy_rows_en deck_footer_row">
+<div class="deck_overview_price">~ $ 340.46</div>
+<div class="deck_buy_button_row">
+<button class="deck_buy" data-shop="tcgplayer" data-tag="deck_overview_button">
+Add to cart on TCGPlayer.com! </button>
+</div>
+<div class="deck_buy_button_row">
+<button class="deck_buy" data-shop="cardkingdom" data-tag="deck_overview_button">
+Add to cart on Card Kingdom! </button>
+</div>
+</div>
+<div class="deck_buy_rows_mtgo deck_footer_row">
+<div class="deck_overview_price">~ 54.03 Tix</div>
+<div class="deck_buy_button_row">
+<button class="deck_buy" data-shop="cardhoarder" data-tag="deck_overview_button">
+Add to cart on Cardhoarder.com! </button>
+</div>
+</div>
+<div id="deck_info_row" class="deck_footer_row">
+<div class="deck_info_attribute">
+<span class="deck_info_attribute_name">Main:</span>
+100 Cards
+</div>
+<div class="deck_info_attribute deck_info_mana">
+<span class="deck_info_attribute_name">Mana:</span>
+<i class="mana nk_icon_u" title="{u}"></i><i class="mana nk_icon_b" title="{b}"></i>
+3.31 avg. </div>
+<div class="deck_info_attribute" title="We cannot guarantee the accuracy of this check. Please confirm with the official banned/restricted lists on the MTG website before buying your deck!" id="deck_overview_legality">
+<i class="fa fa-check" aria-hidden="true"></i>
+Legal in EDH / Commander. </div>
+<div class="deck_info_attribute">
+
+<span class="deck_info_attribute_name">
+Views:</span>
+2 </div>
+<div class="deck_info_attribute">
+<span class="deck_info_attribute_name">Added:</span>
+<strong>Today</strong> at 11:32:22 pm </div>
+<div class="deck_info_attribute">
+<span class="deck_info_attribute_name">Last updated:</span>
+<strong>Today</strong> at 11:32:22 pm </div>
+</div>
+<div class="deck_share_rows deck_footer_row">
+<div class="share_buttons">
+<div class="shariff" data-url="https://deckstats.net/decks/130606/1269669-dimir-commander" data-title="Dimir Commander" data-lang="en" data-theme="grey" data-orientation="horizontal" data-twitter-via="deckstats" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;reddit&quot;,&quot;vk&quot;]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="deck_tabs-stats">
+
+<script type="text/javascript">
+var types_labels = ["Artifact", "Creature", "Enchantment", "Instant", "Land", "Sorcery"];
+var types_data = [15,22,6,8,36,13];
+
+var color_data = [["u", 28],["b", 53],["colorless", 131]];
+var source_data = [["u", 19],["b", 22],["colorless", 2],["any", 1]];
+</script>
+<div class="inhalt">
+<div class="deck_plot_container" id="deck_plot_container">
+<div class="deck_plot_l">
+<div id="jqplot_chart_cc" class="deck_plot"></div>
+<div class="chartactions">
+<button id="plot_cc_regroup_button" class="moved_to_view_placeholder">
+Change card grouping </button>
+</div>
+</div>
+<div class="deck_plot_m">
+<div id="jqplot_chart_types" class="deck_plot"></div>
+<div class="chartactions">
+<input type="button" value="More Details" id="plot_types_detail_button" />
+</div>
+</div>
+<div class="deck_plot_m">
+<div id="jqplot_chart_colors" class="deck_plot"></div>
+<div class="chartactions">
+<input type="button" value="Show Colorless Mana" id="plot_colors_colorless_button" />
+</div>
+</div>
+<div class="deck_plot_r">
+<div id="jqplot_chart_sources" class="deck_plot"></div>
+<div class="chartactions">
+&nbsp;<input type="button" value="Show Colorless Mana" id="plot_sources_colorless_button" />
+</div>
+
+</div>
+</div>
+<div id="deck_container">
+<div id="deck_main">
+<div style="position: relative;">
+<div id="cardtable_column_settings">
+<a class="moved_to_view_placeholder" href="https://deckstats.net/settings/?lng=en" target="_blank" title="Columns">
+<i class="fa fa-columns"></i>
+</a>
+</div>
+<div id="cards_table_container">
+</div>
+</div>
+<button type="button" class="details_button">Toggle details</button>
+</div>
+<div class="deck_commander deck_footer_row"></div>
+<div id="deck_details_footer" class="deck_details_footer_no_sideboard">
+<div style="">
+<div class="deck_share_rows deck_footer_row">
+<div style="font-weight: bold; margin-bottom: 5px;">Share this deck:</div>
+<div class="share_buttons">
+<div class="shariff" data-url="https://deckstats.net/decks/130606/1269669-dimir-commander" data-title="Dimir Commander" data-lang="en" data-theme="grey" data-orientation="horizontal" data-twitter-via="deckstats" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;reddit&quot;,&quot;vk&quot;]"></div>
+</div>
+</div>
+<div class="deck_buy_rows_en deck_footer_row">
+<div style="font-weight: bold; margin-bottom: 5px;">Buy this deck:</div>
+<div class="deck_buy_button_row">
+<button class="deck_buy" data-shop="tcgplayer" data-tag="deck_details_button">
+Add to cart on TCGPlayer.com! </button>
+</div>
+<div class="deck_buy_button_row">
+<button class="deck_buy" data-shop="cardkingdom" data-tag="deck_details_button">
+Add to cart on Card Kingdom! </button>
+</div>
+</div>
+<div class="deck_buy_rows_mtgo deck_footer_row">
+<div style="font-weight: bold; margin-bottom: 5px;">Buy this deck for Magic Online:</div>
+<button class="deck_buy" data-shop="cardhoarder" data-tag="deck_details_button">
+Add to cart on Cardhoarder.com! </button>
+</div>
+</div>
+</div>
+</div>
+<div class="ui-widget deck_legality_box" title="We cannot guarantee the accuracy of this check. Please confirm with the official banned/restricted lists on the MTG website before buying your deck!" id="deck_details_legality_box">
+<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em; border-color: #9c9; background: #efe;">
+<p>
+<span class="ui-icon ui-icon-check" style="float: left; margin-right: .3em;"></span>This deck appears to be <b>legal</b> in <b>EDH / Commander</b>! </p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="deck_tabs-plots"><div id="deck_tabs-plots_content" class="inhalt2 deck_plot_container"></div></div>
+<div id="deck_tabs-spoiler">
+<div class="inhalt">
+<div id="visual_spoiler_container">
+</div>
+</div> </div>
+<div id="deck_tabs-hand">
+<div class="inhalt2">
+<div style="text-align: center;">
+<input type="button" value="New Hand" onclick="generate_hand()" />
+<input type="button" value="Add Another Card" onclick="add_random_card(true)" />
+<input type="button" value="Mulligan" onclick="mulligan()" />
+</div>
+<div id="starthand_karten" style="font-size: 1.1em; margin-top: 1em"></div>
+</div> </div>
+<div id="deck_tabs-playtest">
+<div class="inhalt2">
+<div style="text-align: center;" id="playtest_buttons">
+<button id="playtest_next_turn_button">Next Turn</button>
+<button id="playtest_draw_button">Draw Card</button>
+<button id="playtest_create_button">Create Card</button>
+<button id="playtest_dice_button">Roll Dice</button>
+<button id="playtest_shuffle_button">Shuffle</button>
+<button id="playtest_restart_button">Restart</button>
+<button id="playtest_mulligan_button">Mulligan</button>
+<button id="playtest_options_button">Options</button>
+</div>
+</div>
+<div id="playtest_stats">
+Turn:
+<input class="playtest_counter" data-counter-name="turn" type="number" value="0" min="1">
+Your life:
+<input class="playtest_counter" data-counter-name="life1" type="number" value="0" min="0">
+Opponent's life:
+<input class="playtest_counter" data-counter-name="life2" type="number" value="0" min="0">
+Poison counters:
+<input class="playtest_counter" data-counter-name="poison" type="number" value="0" min="0">
+</div>
+<div id="playtest_container">
+<div id="playtest_top_container">
+<div class="playtest_section" id="playtest_section_hand" data-section-name="hand">
+<div class="playtest_header">Hand (<span class="playtest_amount">0</span>)</div>
+<div class="playtest_cards playtest_drop">
+</div>
+</div>
+<div class="playtest_section" id="playtest_section_library" data-section-name="library">
+<div class="playtest_header">Library (<span class="playtest_amount">0</span>)</div>
+<div class="playtest_stack playtest_drop"></div>
+</div>
+<div class="playtest_section" id="playtest_section_graveyard" data-section-name="graveyard">
+<div class="playtest_header">Graveyard (<span class="playtest_amount">0</span>)</div>
+<div class="playtest_stack playtest_drop"></div>
+</div>
+<div class="playtest_section" id="playtest_section_exile" data-section-name="exile">
+<div class="playtest_header">Exile (<span class="playtest_amount">0</span>)</div>
+<div class="playtest_stack playtest_drop"></div>
+</div>
+</div>
+<div class="playtest_section" id="playtest_section_board" data-section-name="board">
+<div class="playtest_header">Board (<span class="playtest_amount">0</span>)</div>
+<div class="playtest_cards playtest_drop playtest_drop_free">
+</div>
+</div>
+</div>
+<div id="playtest_dialog_create" title="Create Card">
+<h3>Name</h3>
+<input id="playtest_dialog_create_name">
+<h3>Type</h3>
+<input id="playtest_dialog_create_type">
+<h3>Notes</h3>
+<textarea id="playtest_dialog_create_notes" rows="2"></textarea>
+<div id="playtest_dialog_create_pt_container">
+<div class="playtest_dialog_create_pt_inner">
+<h3>Power</h3>
+<div><input id="playtest_dialog_create_power" type="number" min="0" value="0"></div>
+</div>
+<div class="playtest_dialog_create_pt_inner">
+<h3>Toughness</h3>
+<div><input id="playtest_dialog_create_toughness" type="number" min="0" value="0"></div>
+</div>
+</div>
+</div>
+<div id="playtest_dialog_card">
+<div id="playtest_dialog_card_image_container">
+<img id="playtest_dialog_card_image" alt="card" src="">
+</div>
+<div id="playtest_dialog_card_info">
+<h3>Type</h3>
+<span id="playtest_dialog_card_type"></span>
+<h3>Notes</h3>
+<textarea id="playtest_dialog_card_notes" rows="2"></textarea>
+<div id="playtest_dialog_card_pt_container">
+<div class="playtest_dialog_card_pt_inner">
+<h3>Power</h3>
+<div><input id="playtest_dialog_card_power" type="number" min="0" value="0"></div>
+</div>
+<div class="playtest_dialog_card_pt_inner">
+<h3>Toughness</h3>
+<div><input id="playtest_dialog_card_toughness" type="number" min="0" value="0"></div>
+</div>
+<div class="playtest_dialog_card_pt_inner">
+<h3>&nbsp;</h3>
+<button class="playtest_dialog_card_pt_change" data-pt-change="1">+1/+1</button>
+<button class="playtest_dialog_card_pt_change" data-pt-change="-1">-1/-1</button>
+</div>
+</div>
+<h3>Counters</h3>
+<div>
+<input id="playtest_dialog_card_counters" type="number" value="0" min="0">
+</div>
+<h3>Move this card to:</h3>
+<div class="playtest_dialog_card_move_buttons">
+<button data-section-name="hand">Hand</button>
+<button data-section-name="board">Board</button>
+<button data-section-name="library">Library</button>
+<button data-section-name="graveyard">Graveyard</button>
+<button data-section-name="exile">Exile</button>
+</div>
+<h3>Actions</h3>
+<div>
+<button id="playtest_dialog_card_duplicate">Duplicate</button>
+<button id="playtest_dialog_card_clear">Clear Counters</button>
+</div>
+</div>
+</div>
+<div id="playtest_dialog_dice" title="Roll Dice">
+<table>
+<tr>
+<th>2-sided (coin flip)</th>
+<td class="playtest_dialog_dice_result" data-sides="2"></td>
+</tr>
+<tr>
+<th>6-sided (d6)</th>
+<td class="playtest_dialog_dice_result" data-sides="6"></td>
+</tr>
+<tr>
+<th>20-sided (d20)</th>
+<td class="playtest_dialog_dice_result" data-sides="20"></td>
+</tr>
+<tr>
+<th>
+Sides: <input id="playtest_dialog_dice_custom_number" type="number" min="2" value="10">
+</th>
+<td class="playtest_dialog_dice_result" data-sides="custom"></td>
+</tr>
+</table>
+</div>
+<div id="playtest_dialog_options" title="Playtest Options">
+<h3>Auto-draw</h3>
+<label>
+<input id="playtest_dialog_options_auto_draw" type="checkbox">
+Draw a new card each turn	</label>
+<h3>Auto-untap</h3>
+<label>
+<input id="playtest_dialog_options_auto_untap" type="checkbox">
+Untap all cards each turn	</label>
+</div>
+<div class="playtest_dialog_stack" id="playtest_dialog_stack">
+<div class="playtest_dialog_stack_container">
+<select class="playtest_dialog_stack_cards" multiple="multiple"></select>
+<div class="playtest_dialog_stack_right">
+<p>Double-click to open card details.</p>
+<h3>Move selected to:</h3>
+<div class="playtest_dialog_stack_move_buttons">
+<button data-section-name="hand">Hand</button>
+<button data-section-name="board">Board</button>
+<button data-section-name="library">Library</button>
+<button data-section-name="graveyard">Graveyard</button>
+<button data-section-name="exile">Exile</button>
+</div>
+</div>
+</div>
+</div> </div>
+<div id="deck_tabs-probcalc">
+<div id="probcalc">
+<button id="probcalc_input_reset">Reset</button>
+<div id="probcalc_input">
+<div class="section_header">Combined probability</div>
+<div class="inhalt2">
+<div id="probcalc_input_head">
+<div id="probcalc_input_head_amount">Min. amount:</div>
+<div id="probcalc_input_head_card">Card:</div>
+</div>
+<div id="probcalc_input_cards"></div>
+<div class="probcalc_input_buttons">
+<button id="probcalc_input_calc">Calculate</button>
+</div>
+</div>
+<div class="section_header">Custom calculation</div>
+<div class="inhalt2">
+<div id="probcalc_input_manual">
+If I play a card <input id="probcalc_input_manual_available" type="number" min="1" value="4"> times in my 100 card deck, how likely am I to draw it <select id="probcalc_input_manual_type"><option value="minimum">at least</option><option value="exact">exactly</option></select> <input id="probcalc_input_manual_wanted" type="number" min="1" value="2"> times? </div>
+<div class="probcalc_input_buttons">
+<button id="probcalc_input_calc_manual">Calculate</button>
+</div>
+</div>
+</div>
+<div id="probcalc_plot"></div>
+</div>
+<div id="probcalc_table">
+<table class="cardtable cardtable_probs generic" id="probcalc_table_table">
+<thead>
+<tr> 
+<th class="card_amount">&nbsp;</th>
+<th class="card">Name</th>
+<th>Hand</th>
+<th>Turn 1</th>
+<th>Turn 2</th>
+<th>Turn 3</th>
+<th>Turn 4</th>
+<th>Turn 5</th>
+<th>Turn 6</th>
+<th>Turn 7</th>
+<th>Turn 8</th>
+<th>Turn 9</th>
+<th>Turn 10</th>
+</tr>
+</thead>
+<tbody class="tablesorter-no-sort" id="probcalc_table_tbody_additional_head">
+<tr class="deck_section">
+<td colspan="13" class="tablesorter-no-sort"><h3>Additional Probabilities</h3></td>
+</tr>
+</tbody>
+<tbody id="probcalc_table_tbody_additional"></tbody>
+
+</table>
+</div> </div>
+<div id="deck_tabs-matchups">
+</div>
+<div id="deck_tabs-tools">
+<div class="section_header" id="deck_code_header">Embed Into Forums or Website</div>
+<div class="inhalt2">
+<div style="margin-bottom: 5px;">
+For forums and blogs please select one of the BB-Code options. For websites and forums that support HTML (e.g. Wizards Community Forums) you can use the HTML options!	</div>
+<div style="margin-top: 1em;">
+<div>
+<select name="code_type" id="code_type">
+<option value="bb_deck">BB-Code with DECK tags (for MTG-Forum.de)</option>
+<option value="bb_url">BB-Code with URL tags (recommended for most forums)</option>
+<option value="markdown">Markdown List (for reddit)</option>
+<option value="markdown_table">Markdown Table (for reddit)</option>
+<option value="html_wide">HTML code for high table</option>
+<option value="html_normal">HTML for wide table (recommended for Wizards Community)</option>
+</select>
+<select name="code_extended" id="code_extended">
+<option value="0">Normal View</option>
+<option value="1">Extended View (with mana symbols)</option>
+</select>
+<input class="button" type="submit" name="get_code" id="get_code" value="Generate Embed Code" />
+</div>
+<div>
+<label id="code_html_nl_label">
+<input name="code_html_nl" id="code_html_nl" type="checkbox" style="border: 0" />
+Use linebreaks in HTML code (disable for Wizards Community) </label>
+</div>
+<script type="text/javascript">
+			function generate_code_action(e) {
+				e.preventDefault();
+
+				document.location.href = 'https://deckstats.net/decks/130606/1269669-dimir-commander/en?get_code=1' +
+					'&code_type=' + $('#code_type').val() +
+					'&code_extended=' + $('#code_extended').val() +
+					'&code_html_nl=' + ($('#code_html_nl').is(':checked')? 'on' : 'off');
+			}
+
+			$(function(){
+				$('#get_code').click(generate_code_action);
+
+				$('#code_type,#code_extended,#code_html_nl').change(function(e) {
+					$('#code_result').hide();
+				});
+				$('#code_type').change(function(e) {
+					if($(this).val().substr(0, 4) == 'html') {
+						$('#code_html_nl_label').show();
+					} else {
+						$('#code_html_nl_label').hide();
+					}
+				});
+				updateCodeType($('#code_type')[0]);
+			});
+		</script>
+</div>
+</div>
+<div class="section_header" style="margin-top: 1em;">Link to this deck</div>
+<div class="inhalt2">
+<div style="overflow: hidden;">
+<div class="deck_url_long_container">
+<input type="text" readonly="readonly" value="https://deckstats.net/decks/130606/1269669-dimir-commander" class="deck_url_input" id="deckstats_deck_url" />
+<div class="deck_share_buttons">
+<div class="share_buttons">
+<div class="shariff" data-url="https://deckstats.net/decks/130606/1269669-dimir-commander" data-title="Dimir Commander" data-lang="en" data-theme="standard" data-orientation="horizontal" data-twitter-via="deckstats" data-services="[&quot;facebook&quot;,&quot;twitter&quot;,&quot;reddit&quot;,&quot;vk&quot;]"></div>
+</div>
+</div>
+</div>
+<div class="deck_url_short_container">
+<div id="deck_url_short_or">
+or:
+</div>
+<input type="text" readonly="readonly" value="http://deck.tk/1uGM17ce" size="30" class="deck_url_input" id="deckstats_deck_url_short" />
+</div>
+</div>
+</div>
+</div>
+<div id="deck_tabs-edh">
+<div class="inhalt2">
+With this tool you can get recommendations for new cards to add to your EDH deck, based on which cards other players play with this Commander.	To make sure your deck is analyzed properly, please <b>flag your Commander in the deckbuilder</b> or put it in a separate section called "Commander"!</div>
+<div id="edh_specify_commander">
+<h3 class="section_header">Specify Commander</h3>
+<div class="inhalt2">
+<div>
+Unfortunately, we could not automatically detect the commander in this deck. Please choose it here: </div>
+<div style="margin-top: 4px;">
+<select id="edh_specify_commander_select"></select>
+<button type="button" id="edh_specify_commander_button">Go</button>
+</div>
+</div>
+</div>
+<h3 class="section_header">Top Recommended Cards</h3>
+<div class="inhalt2">
+<div id="edh_card_types">
+Show:
+<label><input id="edh_card_type_lands" type="checkbox" checked="checked">Lands</label>
+<label><input id="edh_card_type_spells" type="checkbox" checked="checked">Spells</label>
+<label><input id="edh_card_type_creatures" type="checkbox" checked="checked">Creatures</label>
+</div>
+</div>
+<div class="inhalt2">
+<div id="edh_recommendations_wait"><img src="https://i.hbtronix.de/_own/loading.gif" alt="Loading..." /></div>
+<div id="edh_recommendations"></div>
+</div>
+<div class="inhalt2">
+<div style="text-align: right;">
+Powered by edhrec.com! </div>
+</div>
+</div>
+<div id="deck_tabs-comments"> <div class="inhalt2">
+<div id="buttons_top">
+<button type="button" class="new_comment_button">
+Write a comment
+</button>
+<button type="button" class="all_comments_button">
+Read all comments
+</button>
+</div>
+<div id="comments">
+</div>
+<div id="more_comments_message" class="comment ui-widget-content ui-corner-all">
+<button type="button" id="load_older_comments_button">
+Load older comments
+</button>
+</div>
+<div id="no_comments_message" class="comment ui-widget-content ui-corner-all">
+There are no comments about this deck yet. </div>
+<div id="write_comment_new" class="comment ui-widget-content ui-corner-all">
+<div id="write_comment_error_message"></div>
+<textarea id="write_comment_text" cols="50" rows="6"></textarea>
+<div style="overflow: hidden;">
+<div style="float: right; vertical-align: middle;">
+<div>English <b>card names</b> will be <b>linked automatically</b>.</div>
+<div>In addition, you can use <b>BBCode</b> (like [b][/b], [url=...][/url] and so on) here!</div>
+</div>
+<div style="vertical-align: middle;" id="write_comment_buttons">
+<button type="button" id="submit_comment_button">
+Submit Comment
+</button>
+<button type="button" id="close_form_button">
+Close Form
+</button>
+</div>
+</div>
+</div>
+<div id="buttons_bottom">
+<button type="button" class="new_comment_button">
+Write a comment
+</button>
+<button type="button" class="all_comments_button">
+Read all comments
+</button>
+</div>
+</div>
+<script>
+	comment_api = "https:\/\/deckstats.net\/api_comments.php?deck_saved_id=1269669&lng=en&subaction=";
+	</script>
+</div> </div>
+</div>
+<div id="page_loading"></div>
+</div>
+<div id="eventbar_footer">
+<div class="eventbar_footer_row">
+<a href="https://www.facebook.com/deckstats/" target="_blank" rel="noopener">
+<i class="fa fa-facebook-official" aria-hidden="true"></i>
+deckstats.net
+</a>
+</div>
+<div class="eventbar_footer_row">
+<a href="https://twitter.com/deckstats" target="_blank" rel="noopener">
+<i class="fa fa-twitter" aria-hidden="true"></i>
+@deckstats
+</a>
+</div>
+</div>
+<div id="footer_container">
+<div id="footer_full">
+<div class="footer_links">
+<a href='https://deckstats.net/members/?lng=en'>Members</a>
+| <a href='https://deckstats.net/?lng=en&amp;about=1'>About Us</a>
+| <a href="http://koelling.co.uk/disclaimer_en.php" target="_blank" title="Privacy Policy">Privacy Policy</a>
+</div>
+<div id="language_bar">
+<div id="language_button" title="Select Language">
+<span id="language_bar_title">Language</span>
+<i class="fa fa-caret-up" aria-hidden="true"></i>
+</div>
+<div id="language_flags">
+<a data-code="en" class="language_link language_link_en" href="https://deckstats.net/decks/130606/1269669-dimir-commander/en"><img src="https://i.hbtronix.de/flags/usgb.png" alt="en" width="16" height="11" /></a>
+<a data-code="de" class="language_link language_link_de" href="https://deckstats.net/decks/130606/1269669-dimir-commander/de"><img src="https://i.hbtronix.de/flags/de.png" alt="de" width="16" height="11" /></a>
+<a data-code="es" class="language_link language_link_es" href="https://deckstats.net/decks/130606/1269669-dimir-commander/es"><img src="https://i.hbtronix.de/flags/es.png" alt="es" width="16" height="11" /></a>
+<a data-code="pt" class="language_link language_link_pt" href="https://deckstats.net/decks/130606/1269669-dimir-commander/pt"><img src="https://i.hbtronix.de/flags/ptbr.png" alt="pt" width="16" height="11" /></a>
+<a data-code="it" class="language_link language_link_it" href="https://deckstats.net/decks/130606/1269669-dimir-commander/it"><img src="https://i.hbtronix.de/flags/it.png" alt="it" width="16" height="11" /></a>
+<a data-code="fr" class="language_link language_link_fr" href="https://deckstats.net/decks/130606/1269669-dimir-commander/fr"><img src="https://i.hbtronix.de/flags/fr.png" alt="fr" width="16" height="11" /></a>
+</div>
+</div>
+<div id="copyright_notice" lang="en">
+deckstats.net &copy; 2019. All rights reserved.
+Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. &copy; 2009 Wizards. All Rights Reserved.
+<span onclick="jQuery('#copyright_details').show(); jQuery(this).hide();" style="cursor: pointer; text-decoration: underline;">more...</span>
+<div id="copyright_details" style="display: none">
+This web site is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC.
+This web site may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy. For example, MAGIC: THE GATHERING(r) is a trademark of Wizards of the Coast.
+For more information about Wizards of the Coast or any of Wizards' trademarks or other intellectual property, please visit their website at (www.wizards.com).
+All information is subject to change without prior notice. Although we try to present current and accurate information, we cannot make any guarantees of any kind.
+Responsibility for comments, forum posts, messages and any other user-generated content lies with their respective authors.
+We do not monitor or necessarily agree with any personal opinions or other expressions published in any such content.
+(0.04 sec)
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul id="language_menu" class="deck_menu">
+<li><a data-code="en" class="language_link language_link_en" href="https://deckstats.net/decks/130606/1269669-dimir-commander/en"><img src="https://i.hbtronix.de/flags/usgb.png" alt="en" width="16" height="11" /> English</a>
+<li><a data-code="de" class="language_link language_link_de" href="https://deckstats.net/decks/130606/1269669-dimir-commander/de"><img src="https://i.hbtronix.de/flags/de.png" alt="de" width="16" height="11" /> Deutsch</a>
+<li><a data-code="es" class="language_link language_link_es" href="https://deckstats.net/decks/130606/1269669-dimir-commander/es"><img src="https://i.hbtronix.de/flags/es.png" alt="es" width="16" height="11" /> Espa&ntilde;ol</a>
+<li><a data-code="pt" class="language_link language_link_pt" href="https://deckstats.net/decks/130606/1269669-dimir-commander/pt"><img src="https://i.hbtronix.de/flags/ptbr.png" alt="pt" width="16" height="11" /> Portugu&ecirc;s</a>
+<li><a data-code="it" class="language_link language_link_it" href="https://deckstats.net/decks/130606/1269669-dimir-commander/it"><img src="https://i.hbtronix.de/flags/it.png" alt="it" width="16" height="11" /> Italiano</a>
+<li><a data-code="fr" class="language_link language_link_fr" href="https://deckstats.net/decks/130606/1269669-dimir-commander/fr"><img src="https://i.hbtronix.de/flags/fr.png" alt="fr" width="16" height="11" /> Fran&ccedil;ais</a>
+</ul>
+<div id="wait_dialog" class="any_dialog" title="Please Wait">
+<p style="text-align: center;"><img src="https://i.hbtronix.de/common/loading_bar.gif" alt="loading" /></p>
+<p>Please wait, loading...</p>
+</div>
+<div id="session_error_dialog" class="any_dialog" title="Session error">
+<p>
+An error with your login session occured: </p>
+<p>
+<span id="session_error_text">unknown</span>
+</p>
+<p>
+You can do this in a different tab to avoid losing the data you entered here. Once you are done, click the <b>Refresh Session</b> button and then try again.	</p>
+<p>
+If the problem persists, please contact us.	</p>
+</div>
+<script src="//deckstats.net/js/shariff.min.js"></script>
+</body>
+</html>
