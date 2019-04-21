@@ -117,4 +117,50 @@ const getDeckNames = () => {
   }).error((message) => console.log(`Failed to retrieve page ${EDH_URI} - ${message}`));
 };
 
-module.exports = getDeckNames;
+////////////////
+
+const fs = require('fs');
+const path = require('path');
+
+const savePageContentsLocally = (uri, page) => {
+  const filePath = path.join('..', __dirname, 'temp', uri);
+  if (fs.existsSync(filePath)) {
+    console.log(`deck ${uri} is already saved locally @ ${filePath}`);
+    return;
+  }
+
+  fs.writeFile(filePath, page, (error) => console.log('Failed to save file @ ' + filePath + ':\n' + error))
+};
+
+/**
+ * Bypassing the for-loop to avoid triggering 429 during dev.
+ */
+const getFirstDeck = (redisClient) => {
+
+  const EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
+  const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
+
+  request(({uri: EDH_URI})).then((page) => {
+    const firstDeckUri = page.match(deckLinkPattern)[0];
+
+    redisClient.get(firstDeckUri, (error, value) => {
+      if (value === undefined) {
+        console.log(`Deck ${firstDeckUri} was not previously persisted. Storing...`);
+
+        downloadList()
+          .then(deckList => {
+            console.log(deckList.uri);
+            console.log(deckList.totalCount);
+
+            redisClient.save(deckList.uri, JSON.stringify(deckList), error => {
+              console.log(`Failed to save deck ${deckList.uri}!\n${error}`);
+            });
+          }).error(err => console.log(err));
+      } else {
+        console.log(`Deck ${firstDeckUri} was already persisted. Ignoring.`);
+      }
+    });
+  });
+};
+
+odule.exports = {getDeckNames, getFirstDeck};

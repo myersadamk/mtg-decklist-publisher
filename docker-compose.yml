@@ -5,10 +5,11 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./app:/app
+      - ./app:/usr/app
     links:
       - "redis"
-    command: "npm run start-server"
+        #command: "npm run start-server"
+    command: "npm start"
   redis:
 #    build: ./redis
     image: "redis:alpine"
