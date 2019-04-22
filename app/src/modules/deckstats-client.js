@@ -6,15 +6,27 @@ const request = require('request-promise');
 const DECK_JSON_RE = RegExp('deck_json = (\{.*\});');
 
 class DeckList {
-  constructor(uri, commander, cards, totalCount) {
+
+  constructor(uri, commander, totalCount, cards, options = {verbose: true}) {
     this.uri = uri;
     this.commander = commander;
-    this.cards = cards;
     this.totalCount = totalCount;
+    this.cards = cards;
+
+    this.options = options;
+
+    if (this.options.verbose) {
+      console.debug('Constructed DeckList:\n' + this);
+    }
   }
 
   isLegal() {
     return this.commander !== undefined && this.totalCount === 99;
+  }
+
+  static fromJSON(json) {
+    const deckList = JSON.parse(value);
+    return new DeckList(deckList.uri, deckList.commander, deckList.totalCount, deckList.cards);
   }
 }
 
@@ -41,7 +53,7 @@ const downloadList = uri => {
       // console.log(...mainboard);
       // console.log(totalCount);
     });
-    return new DeckList(uri, commander, mainboard, totalCount);
+    return new DeckList(uri, commander, totalCount, ...mainboard);
     // console.log(ree.exec(page));
     // console.log(page.match('deck_json = (\{.*\});'));
     // console.log(page.toString().match('deck_json = \{.*\}'));
@@ -132,6 +144,10 @@ const savePageContentsLocally = (uri, page) => {
   fs.writeFile(filePath, page, (error) => console.log('Failed to save file @ ' + filePath + ':\n' + error))
 };
 
+class DeckListSource {
+  
+}
+
 /**
  * Bypassing the for-loop to avoid triggering 429 during dev.
  */
@@ -141,26 +157,31 @@ const getFirstDeck = (redisClient) => {
   const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
 
   request(({uri: EDH_URI})).then((page) => {
-    const firstDeckUri = page.match(deckLinkPattern)[0];
+    const firstDeckUri = page.match(deckLinkPattern)[2];
 
     redisClient.get(firstDeckUri, (error, value) => {
-      if (value === undefined) {
+      if (value === null) {
         console.log(`Deck ${firstDeckUri} was not previously persisted. Storing...`);
 
-        downloadList()
+        downloadList(firstDeckUri)
           .then(deckList => {
             console.log(deckList.uri);
             console.log(deckList.totalCount);
 
-            redisClient.save(deckList.uri, JSON.stringify(deckList), error => {
+            // savePageContentsLocally(firstDeckUri, page);
+
+            redisClient.set(deckList.uri, JSON.stringify(deckList), error => {
               console.log(`Failed to save deck ${deckList.uri}!\n${error}`);
             });
           }).error(err => console.log(err));
       } else {
         console.log(`Deck ${firstDeckUri} was already persisted. Ignoring.`);
+        redisClient.get(firstDeckUri, (error, value) => {
+          const deckList = DeckList.fromJSON(value);
+        });
       }
     });
   });
 };
 
-odule.exports = {getDeckNames, getFirstDeck};
+module.exports = {getDeckNames, getFirstDeck};
