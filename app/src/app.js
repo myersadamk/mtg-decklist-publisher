@@ -1,17 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-
-const {getFirstDeck, getDeckLists} = require('./modules/deckstats-client');
-
-
-const app = express();
-
-app.use(bodyParser.urlencoded({extended: false}));
-
-const redisClient = require('redis').createClient(6379, 'redis');
-
+var express = require('express');
+var bodyParser = require('body-parser');
+var _a = require('./modules/deckstats-client'), getFirstDeck = _a.getFirstDeck, getDeckLists = _a.getDeckLists;
+var app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+var redisClient = require('redis').createClient(6379, 'redis');
 getFirstDeck(redisClient);
-
 //
 // client.on('connect', () => {
 //   console.log('connected, bro');
@@ -21,5 +14,4 @@ getFirstDeck(redisClient);
 //   // client.set('key', 'my test value', redis.print);
 // });
 // getDeckLists();
-
 app.listen(3000);
