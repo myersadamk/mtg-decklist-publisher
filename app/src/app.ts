@@ -1,25 +1,25 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+import Express from 'express';
+import * as BodyParser from 'body-parser'
+import {createClient, RedisClient} from 'redis'
 
-const {getFirstDeck, getDeckLists} = require('./modules/deckstats-client');
+import {RequestHandler} from "express";
 
+class App {
+  private application: Express.Application;
+  private redisClient: RedisClient;
 
-const app = express();
+  constructor(bodyDecoder: RequestHandler, redisClient: RedisClient) {
+    this.application = Express();
+    this.application.use(bodyDecoder);
+    this.redisClient = redisClient;
+  }
 
-app.use(bodyParser.urlencoded({extended: false}));
+  public listen(port: Number): void {
+    this.application.listen(port);
+  }
+}
 
-const redisClient = require('redis').createClient(6379, 'redis');
-
-getFirstDeck(redisClient);
-
-//
-// client.on('connect', () => {
-//   console.log('connected, bro');
-//   client.get('key', (error, value) => {
-//     console.log('here is ur key ' + value);
-//   });
-//   // client.set('key', 'my test value', redis.print);
-// });
-// getDeckLists();
-
-app.listen(3000);
+new App(
+  BodyParser.urlencoded({extended: false}),
+  createClient(6379, 'redis')
+).listen(3000);

@@ -1,187 +1,49 @@
-const request = require('request-promise');
-// const cheerio = require('cheerio');
-// const { JSDOM } = require('jsdom');
+import {DeckList} from "./decklist";
+import * as Request from 'request-promise';
 
+export class ScreenScraper {
+  readonly DECK_JSON_RE = RegExp('deck_json = (\{.*\});');
 
-const DECK_JSON_RE = RegExp('deck_json = (\{.*\});');
+  downloadList(uri: String): Promise<DeckList> {
+    return Request(({uri: uri})).then(page => {
+      const listJson = JSON.parse(this.DECK_JSON_RE.exec(page)[1]);
 
-class DeckList {
+      let commander;
+      let mainboard = [];
+      let totalCount = 0;
 
-  constructor(uri, commander, totalCount, cards, options = {verbose: true}) {
-    this.uri = uri;
-    this.commander = commander;
-    this.totalCount = totalCount;
-    this.cards = cards;
-
-    this.options = options;
-
-    if (this.options.verbose) {
-      console.debug('Constructed DeckList:\n' + this);
-    }
-  }
-
-  isLegal() {
-    return this.commander !== undefined && this.totalCount === 99;
-  }
-
-  static fromJSON(json) {
-    const deckList = JSON.parse(value);
-    return new DeckList(deckList.uri, deckList.commander, deckList.totalCount, deckList.cards);
-  }
-}
-
-const downloadList = uri => {
-  return request(({uri: uri})).then(page => {
-    const listJson = JSON.parse(DECK_JSON_RE.exec(page)[1]);
-
-    let commander;
-    let mainboard = [];
-    let totalCount = 0;
-
-    listJson.sections.forEach(section => {
-      mainboard = section.cards
-        .filter(card => card.isSideboard === false)
-        .map(card => {
-          if (card.isCommander) {
-            commander = card.name;
-          }
-          totalCount += card.amount;
-          return [card.name, card.amount]
-        });
-      // .flatMap(cardAndCount => cardAndCount);
-      // console.log(commander);
-      // console.log(...mainboard);
-      // console.log(totalCount);
+      listJson.sections.forEach(section => {
+        mainboard = section.cards
+          .filter(card => card.isSideboard === false)
+          .map(card => {
+            if (card.isCommander) {
+              commander = card.name;
+            }
+            totalCount += card.amount;
+            return [card.name, card.amount]
+          });
+      });
+      return new DeckList(uri, commander, mainboard);
     });
-    return new DeckList(uri, commander, totalCount, ...mainboard);
-    // console.log(ree.exec(page));
-    // console.log(page.match('deck_json = (\{.*\});'));
-    // console.log(page.toString().match('deck_json = \{.*\}'));
-    // const dom = new JSDOM(page);
+  };
 
-    // fs.writeFile('temp.txt', page, (err) => console.log('oh noes!1' + err));
-    // console.log(page)
-    // const wh = dom.window.document.querySelector("div[data-group-section='Main']");
-    // console.log(wh)
-    // // dom.querySelectorAll("div[data-group-section='Main']").forEach(e => console.log(e));
-    //
-    // // const button = dom.window.document.querySelector('#download_deck_dialog > button:nth-child(4)');
-    // // button.click();
-    // console.log('then...');
-    // const $ = cheerio.load(page);
-    // const button = $('#download_deck_dialog > button:nth-child(4)');
-    // console.log(button);
-    // button.click();
-  });
-};
+  getDeckNames(): Promise<Array<String>> {
+    const EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
+    const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
 
-const getDeckNames = () => {
-  const EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
-  const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
-
-  request(({uri: EDH_URI})).then((page) => {
-    // console.log(page.match(deckLinkPattern));
-
-    // downloadList(page.match(deckLinkPattern)[0]).then(deckList => {
-    //   console.log(deckList.uri);
-    //   console.log(deckList.totalCount);
-    // }).error(err => console.log(err));
-
-    // page.match(deckLinkPattern)[0].forEach(link => {
-    //   setInterval(downloadList(link), 50000);
-    // }).then(deckList => {
-    //   console.log(deckList.uri);
-    //   console.log(deckList.totalCount);
-    // }).error(err => console.log(err));
-
-    const links = page.match(deckLinkPattern);
-    const waitInterval = 30000;
-    for (let i = 0; i < links.length; ++i) {
-      setTimeout(() => downloadList(link)
-          .then(deckList => {
-            console.log(deckList.uri);
-            console.log(deckList.totalCount);
-          })
-          .error(err => console.log(err)),
-        waitInterval * i);
-    }
-
-    // page.match(deckLinkPattern).forEach(link => {
-    //   setTimeout(() => downloadList(link)
-    //       .then(deckList => {
-    //         console.log(deckList.uri);
-    //         console.log(deckList.totalCount);
-    //       })
-    //       .error(err => console.log(err)),
-    //     30000);
-    // });
-
-    // console.log(page);
-    // const $ = cheerio.load(page);
-    // // http.get(EDH_URI, (page) => {
-    // tableparser($);
-    // const decks = $(DECK_SEARCH_TABLE_SELECTOR).parsetable();
-    // // .children()[0].children.forEach(child => {
-    // //   console.log(child)
-    // // });
-    // console.log(lol);
-    // console.log(typeof lol);
-  }).error((message) => console.log(`Failed to retrieve page ${EDH_URI} - ${message}`));
-};
-
-////////////////
-
-const fs = require('fs');
-const path = require('path');
-
-const savePageContentsLocally = (uri, page) => {
-  const filePath = path.join('..', __dirname, 'temp', uri);
-  if (fs.existsSync(filePath)) {
-    console.log(`deck ${uri} is already saved locally @ ${filePath}`);
-    return;
-  }
-
-  fs.writeFile(filePath, page, (error) => console.log('Failed to save file @ ' + filePath + ':\n' + error))
-};
-
-class DeckListSource {
-  
-}
-
-/**
- * Bypassing the for-loop to avoid triggering 429 during dev.
- */
-const getFirstDeck = (redisClient) => {
-
-  const EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
-  const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
-
-  request(({uri: EDH_URI})).then((page) => {
-    const firstDeckUri = page.match(deckLinkPattern)[2];
-
-    redisClient.get(firstDeckUri, (error, value) => {
-      if (value === null) {
-        console.log(`Deck ${firstDeckUri} was not previously persisted. Storing...`);
-
-        downloadList(firstDeckUri)
-          .then(deckList => {
-            console.log(deckList.uri);
-            console.log(deckList.totalCount);
-
-            // savePageContentsLocally(firstDeckUri, page);
-
-            redisClient.set(deckList.uri, JSON.stringify(deckList), error => {
-              console.log(`Failed to save deck ${deckList.uri}!\n${error}`);
-            });
-          }).error(err => console.log(err));
-      } else {
-        console.log(`Deck ${firstDeckUri} was already persisted. Ignoring.`);
-        redisClient.get(firstDeckUri, (error, value) => {
-          const deckList = DeckList.fromJSON(value);
-        });
+    return Request(({uri: EDH_URI})).then((page) => {
+      const links = page.match(deckLinkPattern);
+      const waitInterval = 30000;
+      for (let i = 0; i < links.length; ++i) {
+        setTimeout(() => this.downloadList(EDH_URI)
+            .then(deckList => {
+              console.log(deckList.getCommander());
+              console.log(deckList.getCards());
+            }),
+          // .error(err => console.log(err)),
+          waitInterval * i);
       }
-    });
-  });
-};
 
-module.exports = {getDeckNames, getFirstDeck};
+    }).error((message) => console.log(`Failed to retrieve page ${EDH_URI} - ${message}`));
+  }
+}
