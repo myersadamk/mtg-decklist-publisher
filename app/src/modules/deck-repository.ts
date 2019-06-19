@@ -1,12 +1,15 @@
-import {DeckList} from './decklist';
-import {ScreenScraper} from './deckstats-client';
+import DeckList from './decklist';
+import ScreenScraper from './deckstats-client';
 
 import * as Request from 'request-promise';
 import * as FileSystem from 'fs';
 import * as Path from 'path';
 
-class DecklistRepository {
-  private screenScraper: ScreenScraper;
+import Bluebird from 'bluebird';
+import {RedisClient} from 'redis';
+
+export default class DeckRepository {
+  readonly screenScraper: ScreenScraper;
 
   constructor(screenScraper: ScreenScraper) {
     this.screenScraper = screenScraper;
@@ -25,7 +28,7 @@ class DecklistRepository {
   /**
    * Bypassing the for-loop to avoid triggering 429 during dev.
    */
-  getFirstDeck(redisClient: ): Bluebird<DeckList> {
+  getFirstDeck(redisClient: RedisClient): Bluebird<void> {
 
     const EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
     const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
@@ -39,12 +42,12 @@ class DecklistRepository {
 
           this.screenScraper.downloadList(firstDeckUri)
             .then(deckList => {
-              console.log(deckList.uri);
-              console.log(deckList.totalCount);
+              console.log(deckList.getUri());
+              console.log(deckList.getCardCount());
 
               // savePageContentsLocally(firstDeckUri, page);
 
-              redisClient.set(deckList.uri, JSON.stringify(deckList), error => {
+              redisClient.set(deckList.getUri(), JSON.stringify(deckList), error => {
                 console.log(`Failed to save deck ${deckList.uri}!\n${error}`);
               });
             }).error(err => console.log(err));

@@ -1,28 +1,36 @@
-export class DeckList {
-  private uri: String;
-  readonly commander: String;
-  readonly cards: Array<String>;
+export default class DeckList {
+  readonly uri: string;
+  readonly commander: string;
+  readonly cards: Array<string>;
 
-  constructor(uri: String, commander: String, cards: Array<String>) {
+  constructor(uri: string, cards: Array<string>, commander?: string) {
     this.uri = uri;
     this.commander = commander;
     this.cards = cards;
   }
 
-  getCommander(): String {
+  getUri(): string {
+    return this.uri;
+  }
+
+  getCommander(): string {
     return this.commander;
   }
 
-  getCards(): Array<String> {
+  getCards(): Array<string> {
     return this.cards
+  }
+
+  getCardCount(): Number {
+    return this.cards.length;
   }
 
   isLegal() {
     return this.commander !== undefined && this.cards.length === 99;
   }
 
-  static fromJSON(json: String) {
-    const deckList = JSON.parse(value);
+  static fromJSON(json: string) {
+    const deckList = JSON.parse(json);
     return new DeckList(deckList.uri, deckList.commander, deckList.cards);
   }
 }

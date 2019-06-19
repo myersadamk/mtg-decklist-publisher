@@ -21,5 +21,6 @@ class App {
 
 new App(
   BodyParser.urlencoded({extended: false}),
-  createClient(6379, 'redis')
+  // createClient(6379, 'redis')
+  createClient(6379, '192.168.99.100')
 ).listen(3000);

@@ -6,10 +6,14 @@ services:
       - "3000:3000"
     volumes:
       - ./app:/usr/app
+#      - .:/usr/app
+#      - /usr/app/node_modules
     links:
       - "redis"
         #command: "npm run start-server"
     command: "npm start"
+    environment:
+      - REDIS_HOST='redis'
   redis:
 #    build: ./redis
     image: "redis:alpine"
