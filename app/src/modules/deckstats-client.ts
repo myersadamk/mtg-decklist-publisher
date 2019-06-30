@@ -1,51 +1,57 @@
 import DeckList from "./decklist";
-import Bluebird from 'bluebird';
-import * as Request from 'request-promise';
+import * as Request from 'request-promise-native';
 
-export default class ScreenScraper {
-  readonly DECK_JSON_RE = RegExp('deck_json = (\{.*\});');
+class MainBoard {
+  public readonly cards: Card[] = [];
 
-  downloadList(uri: string): Bluebird<DeckList> {
-    return Request.get({uri: uri}).then(page => {
-      const listJson = JSON.parse(this.DECK_JSON_RE.exec(page)[1]);
-
-      let commander: string | null | undefined;
-      let mainboard: string[] = [];
-      let totalCount = 0;
-
-      listJson.sections.forEach(section => {
-        mainboard = section.cards
-          .filter(card => card.isSideboard === false)
-          .map(card => {
-            if (card.isCommander) {
-              commander = card.name;
-            }
-            totalCount += card.amount;
-            return [card.name, card.amount]
-          });
-      });
-      return new DeckList(uri, mainboard, commander);
+  constructor(sectionJson: any) {
+    const isCommander = sectionJson.name === 'Commander';
+    sectionJson.cards.forEach((card: any) => {
+      this.cards.push(new Card(card.name, card.amount, isCommander));
     });
   };
+}
 
-  getDeckNames(): Bluebird<void> {
-    // getDeckNames(): Bluebird<Array<String>> {
-    const EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
-    const deckLinkPattern = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
+class Card {
+  constructor(public readonly name: string, public readonly quantity: number, public readonly isCommander: boolean) {
+  };
+}
 
-    return Request.get({uri: EDH_URI}).then((page) => {
-      const links = page.match(deckLinkPattern);
-      const waitInterval = 30000;
-      for (let i = 0; i < links.length; ++i) {
-        setTimeout(() => this.downloadList(EDH_URI)
-            .then(deckList => {
-              console.log(deckList.getCommander());
-              console.log(deckList.getCards());
-            }),
-          // .error(err => console.log(err)),
-          waitInterval * i);
-      }
+export default class ScreenScraper {
 
-    }).error((message) => console.log(`Failed to retrieve page ${EDH_URI} - ${message}`));
+  private static DECKSTATS_EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
+  private static DECK_LINK_RE = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
+  private static DECK_JSON_RE = RegExp('deck_json = (\{.*\});');
+
+  constructor(private readonly downloadDeckLists: boolean = false) {
+  }
+
+  async getDeckNames(): Promise<DeckList> {
+    return Request.get({uri: ScreenScraper.DECKSTATS_EDH_URI}).then((page: string) => {
+      const deckListLinks = page.match(ScreenScraper.DECK_LINK_RE);
+
+      const lol: string = 'https://deckstats.net/decks/2656/322680-blue-white-awaken-things-edh/en';
+      return this.getDeckList(lol);
+      // return page;
+    });
+  }
+
+  private async getDeckList(deckUri: string): Promise<DeckList> {
+    return Request.get({uri: deckUri}).then((page: string) => {
+      return this.parseDeckListJson(deckUri, JSON.parse(page.match(ScreenScraper.DECK_JSON_RE)[1]));
+    });
+  }
+
+  private parseDeckListJson(uri: string, deckListJson: any): DeckList {
+    console.log(uri);
+    let commander: string | null | undefined;
+    let totalCount = 0;
+
+    const mainboard: any[] | [] = deckListJson.sections
+      .map((section: any) => new MainBoard(section))
+      .flatMap((section: MainBoard) => section.cards)
+      .forEach((card: Card) => console.log(card));
+
+    return new DeckList(uri, mainboard, commander);
   }
 }
