@@ -1,7 +1,9 @@
 import DeckList from "./decklist";
-import * as HTTP from 'request-promise-native';
-import {Observable, from} from "rxjs";
-import {concat, concatAll, mergeAll} from "rxjs/operators";
+// import * as HTTP from 'request-promise-native';
+import HTTP from 'axios-observable'
+import {Observable, from, timer, defer, of} from "rxjs";
+import {concat, concatAll, delay, delayWhen, flatMap, map, mergeAll, retryWhen} from "rxjs/operators";
+import {AxiosResponse} from "axios";
 
 // TODO: there is quite a bit of work here to get all the classes/abstractions right, if we allow that we may want
 // to use other deck formats/better-typed card types. This is really just a prototype.
@@ -46,6 +48,24 @@ class CardJson {
   }
 }
 
+export interface HttpClient {
+  get<T>(uri: string, handler?: HttpResponseHandler<T>): Observable<T>;
+}
+
+export interface HttpResponseHandler<T> {
+  responseCode?(handler: (code: number) => void): boolean;
+}
+
+export class AxiosHttpClient implements HttpClient {
+  get<T>(uri: string, handler?: HttpResponseHandler<T>): Observable<T> {
+    return HTTP.get(uri).pipe(
+      map((response: AxiosResponse<T>) => {
+        return response.data;
+      })
+    );
+  }
+}
+
 // TODO: Probably an interface for this, as well, since there could conceivably be screen scrapers for different sites, and different deck data sources that
 // are not necessarily screen scrapers (someday...).
 export default class ScreenScraper {
@@ -55,27 +75,72 @@ export default class ScreenScraper {
   private static DECK_LINK_RE = new RegExp('https://deckstats.net/decks/[0-9]+/[0-9]+-.*', 'g');
   private static DECK_JSON_RE = new RegExp('\{"sections.*(?=;)');
 
+  constructor(private readonly _http: HttpClient) {
+  }
+
   getDeckLists(): Observable<DeckList> {
-    return from(HTTP.get({uri: ScreenScraper.DECKSTATS_EDH_URI}).then((pageContent: string) => {
-      const deckListLinks = pageContent.match(ScreenScraper.DECK_LINK_RE);
+    // return this._httpClient.get(ScreenScraper.DECKSTATS_EDH_URI).pipe(
+    return this._http.get(ScreenScraper.DECKSTATS_EDH_URI).pipe(
+      map((pageContent: string) => {
+          const deckListLinks = pageContent.match(ScreenScraper.DECK_LINK_RE);
 
-      if (deckListLinks.length === 0) {
-        throw new Error(`No deck list links were found at URI ${ScreenScraper.DECKSTATS_EDH_URI}`);
-      }
-      // TODO: This should get _all_ decks, but there needs to be a setTimeout strategy here to prevent the server from locking us out for making too many
-      // requests in a short period.
+          if (deckListLinks.length === 0) {
+            throw new Error(`No deck list links were found at URI ${ScreenScraper.DECKSTATS_EDH_URI}`);
+          }
+          // TODO: This should get _all_ decks, but there needs to be a setTimeout strategy here to prevent the server from locking us out for making too many
+          // requests in a short period.
+          // return of(deckListLinks.map(link => {
+          //     console.log('made a call ehehehehe');
+          //     return this.getDeckList(link).pipe(delay(1000))
+          //   })
+          // ).pipe(concatAll());
 
-      return from(deckListLinks.map(link => this.getDeckList(link))).pipe(concatAll());
-    })).pipe(concatAll());
+          return from(
+            deckListLinks.map(link => {
+              console.log('made a call ehehehehe');
+              return this.getDeckList(link)
+            })
+          )
+        }
+      ), concatAll()
+    ).pipe(concatAll());
+
+    // return from(HTTP.get({uri: ScreenScraper.DECKSTATS_EDH_URI}).then((pageContent: string) => {
+    //     const deckListLinks = pageContent.match(ScreenScraper.DECK_LINK_RE);
+    //
+    //     if (deckListLinks.length === 0) {
+    //       throw new Error(`No deck list links were found at URI ${ScreenScraper.DECKSTATS_EDH_URI}`);
+    //     }
+    //     // TODO: This should get _all_ decks, but there needs to be a setTimeout strategy here to prevent the server from locking us out for making too many
+    //     // requests in a short period.
+    //     return from(
+    //       deckListLinks.map(link => this.getDeckList(link))
+    //     ).pipe(concatAll());
+    //   })
+    // ).pipe(concatAll());
   }
 
-  private async getDeckList(deckUri: string): Promise<DeckList> {
-    return HTTP.get({uri: deckUri}).then((page: string) => {
-      return ScreenScraper.parseDeckListJson(deckUri, JSON.parse(page.match(ScreenScraper.DECK_JSON_RE)[0]));
-    });
+  getDeckList(deckUri
+                :
+                string
+  ):
+    Observable<DeckList> {
+    return this._http.get(deckUri).pipe(
+      map((pageContent: string) => {
+        return ScreenScraper.parseDeckListJson(deckUri, JSON.parse(pageContent.match(ScreenScraper.DECK_JSON_RE)[0]));
+      })
+    );
   }
 
-  private static parseDeckListJson(uri: string, deckListJson: any): DeckList {
+  private static
+
+  parseDeckListJson(uri
+                      :
+                      string, deckListJson
+                      :
+                      any
+  ):
+    DeckList {
     const deckJson = new DeckJson(deckListJson);
     return new DeckList(uri, deckJson.cardNames, deckJson.commanderName);
   }
