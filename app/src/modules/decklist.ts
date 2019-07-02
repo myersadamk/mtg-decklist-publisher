@@ -1,37 +1,38 @@
+// TODO: This is a specific _type_ of decklist; an EDH decklist. An interface might be appropriate here, in case the functionality ever expands.
 export default class DeckList {
-  readonly uri: string;
-  readonly commander: string;
-  readonly cards: Array<string>;
+  private readonly _isLegal: boolean;
 
-  constructor(uri: string, cards: Array<string>, commander?: string) {
-    this.uri = uri;
-    this.commander = commander;
-    this.cards = cards;
+  constructor(
+    private readonly _uri: string,
+    private readonly _mainboard: Array<string>,
+    private readonly _commander?: string
+  ) {
+    this._isLegal = _commander !== undefined && _mainboard.length === 99;
   }
 
-  getUri(): string {
-    return this.uri;
+  get uri(): string {
+    return this._uri;
   }
 
-  getCommander(): string {
-    return this.commander;
+  get isLegal() {
+    return this._isLegal;
   }
 
-  getCards(): Array<string> {
-    return this.cards
+  get commander() {
+    return this._commander;
   }
 
-  getCardCount(): Number {
-    return this.cards.length;
+  get mainboard() {
+    return this._mainboard
   }
 
-  isLegal() {
-    return this.commander !== undefined && this.cards.length === 99;
+  cards(): Array<string> {
+    return [this._commander, ...this._mainboard];
   }
 
   static fromJSON(json: string) {
-    const deckList = JSON.parse(json);
-    return new DeckList(deckList.uri, deckList.commander, deckList.cards);
+    const [uri, commander, cards] = JSON.parse(json);
+    return new DeckList(uri, commander, cards);
   }
 }
 
