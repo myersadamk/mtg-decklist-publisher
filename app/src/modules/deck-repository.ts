@@ -1,5 +1,5 @@
 import DeckList from './decklist';
-import ScreenScraper from './deckstats-client';
+import DeckStatsScreenScraper from './deck-source/deckstats-dot-net/deckstats-client';
 
 import * as Request from 'request-promise';
 import * as FileSystem from 'fs';
@@ -9,9 +9,9 @@ import Bluebird from 'bluebird';
 import {RedisClient} from 'redis';
 
 export default class DeckRepository {
-  readonly screenScraper: ScreenScraper;
+  readonly screenScraper: DeckStatsScreenScraper;
 
-  constructor(screenScraper: ScreenScraper) {
+  constructor(screenScraper: DeckStatsScreenScraper) {
     this.screenScraper = screenScraper;
   }
 

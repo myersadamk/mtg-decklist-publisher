@@ -1,9 +1,11 @@
-import DeckList from "./decklist";
-// import * as HTTP from 'request-promise-native';
-import HTTP from 'axios-observable'
-import {Observable, from, timer, defer, of, interval} from "rxjs";
-import {concat, concatAll, concatMap, delay, delayWhen, flatMap, map, mergeAll, mergeMap, retryWhen, switchMap, take, tap} from "rxjs/operators";
+import Axios from 'axios-observable'
 import {AxiosResponse} from "axios";
+import {interval, Observable} from "rxjs";
+import {concatAll, concatMap, flatMap, map} from "rxjs/operators";
+
+import DeckList from "../../decklist";
+import DeckSource from "../deck-source";
+import HttpClient from "../../http/http-client";
 
 // TODO: there is quite a bit of work here to get all the classes/abstractions right, if we allow that we may want
 // to use other deck formats/better-typed card types. This is really just a prototype.
@@ -48,27 +50,9 @@ class CardJson {
   }
 }
 
-export interface HttpClient {
-  get<T>(uri: string, handler?: HttpResponseHandler<T>): Observable<T>;
-}
-
-export interface HttpResponseHandler<T> {
-  responseCode?(handler: (code: number) => void): boolean;
-}
-
-export class AxiosHttpClient implements HttpClient {
-  get<T>(uri: string, handler?: HttpResponseHandler<T>): Observable<T> {
-    return HTTP.get(uri).pipe(
-      map((response: AxiosResponse<T>) => {
-        return response.data;
-      })
-    );
-  }
-}
-
 // TODO: Probably an interface for this, as well, since there could conceivably be screen scrapers for different sites, and different deck data sources that
 // are not necessarily screen scrapers (someday...).
-export default class ScreenScraper {
+export default class DeckStatsScreenScraper implements DeckSource {
 
   // TODO: Make URI configuration-driven.
   private static DECKSTATS_EDH_URI = 'http://deckstats.net/decks/f/edh-commander/?lng=en';
@@ -78,15 +62,16 @@ export default class ScreenScraper {
   constructor(private readonly _http: HttpClient) {
   }
 
-  getDeckLists(): Observable<DeckList> {
-    return this._http.get(ScreenScraper.DECKSTATS_EDH_URI).pipe(
+  getDecks(): Observable<DeckList> {
+    return this._http.get(DeckStatsScreenScraper.DECKSTATS_EDH_URI).pipe(
       flatMap((pageContent: string) => {
-        const deckPageUri = pageContent.match(ScreenScraper.DECK_LINK_RE);
+        const deckPageUri = pageContent.match(DeckStatsScreenScraper.DECK_LINK_RE);
         if (deckPageUri.length === 0) {
-          throw new Error(`Failed to find expected deck list link elements at '${ScreenScraper.DECKSTATS_EDH_URI}'.`);
+          throw new Error(`Failed to find expected deck list link elements at '${DeckStatsScreenScraper.DECKSTATS_EDH_URI}'.`);
         }
         return deckPageUri;
       }),
+      // TODO: Find an elegant way to parameterize this interval, and create a retry policy in case the server triggers a 429 lock-out.
       concatMap(uri => interval(3000).pipe(
         map(() => this.getDeckList(uri)))
       ),
@@ -98,7 +83,7 @@ export default class ScreenScraper {
     return this._http.get(deckUri).pipe(
       map((pageContent: string) => {
         console.log('were doing it! ' + new Date());
-        return ScreenScraper.parseDeckListJson(deckUri, JSON.parse(pageContent.match(ScreenScraper.DECK_JSON_RE)[0]));
+        return DeckStatsScreenScraper.parseDeckListJson(deckUri, JSON.parse(pageContent.match(DeckStatsScreenScraper.DECK_JSON_RE)[0]));
       })
     );
   }
