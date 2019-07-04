@@ -2,7 +2,7 @@ import DeckList from "./decklist";
 // import * as HTTP from 'request-promise-native';
 import HTTP from 'axios-observable'
 import {Observable, from, timer, defer, of, interval} from "rxjs";
-import {concat, concatAll, concatMap, delay, delayWhen, flatMap, map, mergeAll, mergeMap, retryWhen, take, tap} from "rxjs/operators";
+import {concat, concatAll, concatMap, delay, delayWhen, flatMap, map, mergeAll, mergeMap, retryWhen, switchMap, take, tap} from "rxjs/operators";
 import {AxiosResponse} from "axios";
 
 // TODO: there is quite a bit of work here to get all the classes/abstractions right, if we allow that we may want
@@ -80,86 +80,24 @@ export default class ScreenScraper {
 
   getDeckLists(): Observable<DeckList> {
     return this._http.get(ScreenScraper.DECKSTATS_EDH_URI).pipe(
-      mergeMap((pageContent: string) => {
-        const deckListLinks = pageContent.match(ScreenScraper.DECK_LINK_RE);
-
-        if (deckListLinks.length === 0) {
-          throw new Error(`No deck list links were found at URI ${ScreenScraper.DECKSTATS_EDH_URI}`);
+      flatMap((pageContent: string) => {
+        const deckPageUri = pageContent.match(ScreenScraper.DECK_LINK_RE);
+        if (deckPageUri.length === 0) {
+          throw new Error(`Failed to find expected deck list link elements at '${ScreenScraper.DECKSTATS_EDH_URI}'.`);
         }
-
-        return deckListLinks;
+        return deckPageUri;
       }),
-      flatMap(deckListUri => interval( 10000).pipe(map(() => deckListUri))),
-      concatMap(deckListUri => this.getDeckList(deckListUri))
-
-      // flatMap(deckListUri => this.getDeckList(deckListUri)),
-      // mergeMap(uri => timer(0, 5000).pipe(take(1), map(() => uri)))
-    )
+      concatMap(uri => interval(3000).pipe(
+        map(() => this.getDeckList(uri)))
+      ),
+      concatAll()
+    );
   }
 
-  //
-  //
-  // // return this._httpClient.get(ScreenScraper.DECKSTATS_EDH_URI).pipe(
-  // return this._http.get(ScreenScraper.DECKSTATS_EDH_URI).pipe(
-  //   map((pageContent: string) => {
-  //       const deckListLinks = pageContent.match(ScreenScraper.DECK_LINK_RE);
-  //
-  //       if (deckListLinks.length === 0) {
-  //         throw new Error(`No deck list links were found at URI ${ScreenScraper.DECKSTATS_EDH_URI}`);
-  //       }
-  //       // TODO: This should get _all_ decks, but there needs to be a setTimeout strategy here to prevent the server from locking us out for making too many
-  //       // requests in a short period.
-  //       // return of(deckListLinks.map(link => {
-  //       //     console.log('made a call ehehehehe');
-  //       //     return this.getDeckList(link).pipe(delay(1000))
-  //       //   })
-  //       // ).pipe(concatAll());
-  //
-  //       // const poll = of({}).pipe(
-  //       //   mergeMap(_ => fakeDelayedRequest()),
-  //       //   tap(display),
-  //       //   delay(3000),
-  //       //   repeat()
-  //       // );
-  //
-  //       // of({}).pipe(
-  //       //   mergeMap(_ =>  of(new Date()).pipe(delay(3000))),
-  //       //   tap()
-  //       // )
-  //
-  //     //   * const letters = of('a', 'b', 'c');
-  //     // * const result = letters.pipe(
-  //     //   *   mergeMap(x => interval(1000).pipe(map(i => x+i))),
-  //     //   * );
-  //
-  //       return from(
-  //         deckListLinks.map(link => {
-  //           console.log('made a call ehehehehe');
-  //           return this.getDeckList(link)
-  //         })
-  //       )
-  //     }
-  //   ), concatAll()
-  // ).pipe(concatAll());
-
-  // return from(HTTP.get({uri: ScreenScraper.DECKSTATS_EDH_URI}).then((pageContent: string) => {
-  //     const deckListLinks = pageContent.match(ScreenScraper.DECK_LINK_RE);
-  //
-  //     if (deckListLinks.length === 0) {
-  //       throw new Error(`No deck list links were found at URI ${ScreenScraper.DECKSTATS_EDH_URI}`);
-  //     }
-  //     // TODO: This should get _all_ decks, but there needs to be a setTimeout strategy here to prevent the server from locking us out for making too many
-  //     // requests in a short period.
-  //     return from(
-  //       deckListLinks.map(link => this.getDeckList(link))
-  //     ).pipe(concatAll());
-  //   })
-  // ).pipe(concatAll());
-
-  getDeckList(deckUri: string): Observable<DeckList> {
-    console.log('were doing it!');
+  private getDeckList(deckUri: string): Observable<DeckList> {
     return this._http.get(deckUri).pipe(
       map((pageContent: string) => {
+        console.log('were doing it! ' + new Date());
         return ScreenScraper.parseDeckListJson(deckUri, JSON.parse(pageContent.match(ScreenScraper.DECK_JSON_RE)[0]));
       })
     );

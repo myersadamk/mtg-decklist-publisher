@@ -25,6 +25,13 @@ describe('When retrieving from the DeckStats page for reals', () => {
       complete: () => done()
     });
   }, fiveSecondsInMillis);
+
+  it('just goes', (done) => {
+    scraper.mcTesterson().pipe(take(3)).subscribe({
+      next: lol => console.log(lol),
+      complete: () => done()
+    });
+  }, 10000)
 });
 
 // describe('When mocking DeckStats', () => {
