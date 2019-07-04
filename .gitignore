@@ -1,5 +1,5 @@
+.idea
 app/node_modules
-app/dist
 app/yarn.lock
+app/dist
 data
-*/.idea
