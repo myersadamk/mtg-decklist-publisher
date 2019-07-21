@@ -1,8 +1,6 @@
-import Express from 'express';
+import Express, {RequestHandler} from 'express';
 import * as BodyParser from 'body-parser'
 import {createClient, RedisClient} from 'redis'
-
-import {RequestHandler} from "express";
 
 class App {
   private application: Express.Application;
