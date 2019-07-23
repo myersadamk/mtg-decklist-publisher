@@ -6,7 +6,7 @@ import {AxiosHttpClient} from "../../../http/http-client";
  * Integration-style tests that actuall hit the DeckStats webpage, but don't utilize a Redis instance for persistent
  * storage. These really just test the DeckStatsScreenScraper doesn't blow up, e.g. the page is formatted as expected.
  */
-describe('When retrieving from the DeckStats page for reals', () => {
+xdescribe('When retrieving from the DeckStats page for reals', () => {
   const scraper = new DeckStatsScreenScraper(new AxiosHttpClient());
   // const fiveSecondsInMillis = 5000;
   const fiveSecondsInMillis = 50000;
